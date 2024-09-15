@@ -2,30 +2,101 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import img from "../assets/images/register.svg";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Register">
   <div class="flex flex-col mx-auto">
-    <section class="bg-[#009CFF] bg-opacity-10 w-full">
-      <div class="flex justify-center mx-auto pt-40 pb-20 lg:max-w-7xl">
-        <h1 class="text-5xl jersey font-bold text-[#F2F4FF]">DIGITAL OPRYDNINGSDAG</h1>
+    <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16">
+      <div class="flex justify-center mx-auto pt-32 pb-6 md:max-w-7xl">
+        <h1 class="text-2xl jersey font-bold text-[#F2F4FF] md:text-5xl">DIGITAL OPRYDNINGSDAG</h1>
       </div>
-      <div class="flex justify-center mx-auto lg:max-w-7xl gap-20">
+      <div class="flex justify-center mx-auto gap-4 md:max-w-7xl">
         <div class="flex flex-col justify-center gap-4">
-          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 items-center text-5xl jersey font-bold text-[#1DBF62]">15</div>
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-4 flex flex-col w-16 items-center text-3xl jersey font-bold text-[#1DBF62] md:text-5xl">15</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Dag</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 text-5xl items-center jersey font-bold text-[#1DBF62]">03</div>
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-4 flex flex-col w-16 items-center text-3xl jersey font-bold text-[#1DBF62] md:text-5xl">03</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Månede</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 items-center text-5xl jersey font-bold text-[#1DBF62]">24</div>
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-4 flex flex-col w-16 items-center text-3xl jersey font-bold text-[#1DBF62] md:text-5xl">24</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">År</div>
         </div>
       </div>
+      <div class="flex justify-center mx-auto pt-10">
+        <Button variant="primary" size="medium"
+          >Del med en ven<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M15.75 4.5a3 3 0 1 1 .825 2.066l-8.421 4.679a3.002 3.002 0 0 1 0 1.51l8.421 4.679a3 3 0 1 1-.729 1.31l-8.421-4.678a3 3 0 1 1 0-4.132l8.421-4.679a3 3 0 0 1-.096-.755Z" clip-rule="evenodd"></path>
+          </svg>
+        </Button>
+      </div>
+      <Image src={img} alt="img" class="hidden md:block object-cover md:w-full" />
+      <div id="form">
+        <div>
+          <form class="flex flex-col w-2/3 md:grid grid-col-2 max-w-md mx-auto">
+            <h1 class="font-bold pt-10 pb-4 text-2xl">Registrer din digitale oprydning.</h1>
+
+            <div class="flex flex-col py-1 text-slate-800">
+              <label for="antal" class="pr-2 pb-1">Antal:</label>
+              <input type="number" id="antal" name="antal" placeholder="1" class="pointer-events-auto bg-gray-200/80 rounded-md border-none" />
+            </div>
+
+            <div class="flex flex-wrap py-1">
+              <span class="text-slate-800">Levering:</span>
+              <div class="flex flex-wrap gap-4 pl-4">
+                <div class="flex flex-cols items-center gap-2">
+                  <input type="radio" id="postnord" name="levering" value="postnord" checked />
+                  <label for="postnord" class="text-slate-600">PostNord</label>
+                </div>
+                <div class="flex flex-cols items-center gap-2">
+                  <input type="radio" id="postnord" name="levering" value="postnord" />
+                  <label for="afhentselv" class="text-slate-600">Afhent Selv</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col py-1">
+              <label for="navn" class="pr-1 pb-1">Navn:</label>
+              <input type="text" id="navn" name="navn" value="" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+            </div>
+            <div class="flex flex-col py-1">
+              <label for="email" class="pb-1">E-mail:</label>
+              <input type="text" id="email" name="email" value="" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+            </div>
+            <div class="flex flex-col py-1">
+              <label for="adresse" class="pb-1">Adresse:</label>
+              <input type="text" id="adresse" name="adresse" value="" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+            </div>
+            <div class="flex flex-col md:flex-row py-2 gap-2">
+              <div class="flex-1">
+                <label for="postnummer&by" class="block pb-1 text-slate-800">By</label>
+                <input type="text" id="postnummer&by" name="postnr&by" value="" class="w-full bg-gray-200/80 text-slate-600 rounded-md border-none" />
+              </div>
+              <div class="flex-1">
+                <label for="postnummer&by" class="block pb-1 text-slate-800">Postnummer</label>
+                <input type="text" id="postnummer&by" name="postnr&by" value="" class="w-full bg-gray-200/80 text-slate-600 rounded-md border-none" />
+              </div>
+            </div>
+
+            <div class="flex flex-col py-1">
+              <label for="telefon" class="pb-1">Telefon:</label>
+              <input type="text" id="telefon" name="telefon" value="555-555" class="w-auto bg-gray-200/80 text-slate-600 rounded-md border-none" />
+            </div>
+            <div class="py-4">
+              <input type="checkbox" class="accent-blue-500" />
+              <label for="betalning" class="text-slate-600">Ja tak til nyhedsbrev og tilbud</label>
+            </div>
+            <div class="flex gap-4 justify-end animate-pulse">
+              <Link href="#" target="_blank" variant="primary" size="medium">Til betaling </Link>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
+
+    <section></section>
   </div>
-  <Image src={img} alt="img" class="md:w-full object-cover" />
 </MainLayout>
-<section></section>
