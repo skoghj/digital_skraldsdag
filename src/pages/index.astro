@@ -1,15 +1,75 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import herounit from "../assets/images/eksemple.jpeg";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section class="flex flex-col md:grid grid-cols-3 gap-10 px-10">
+    <div class="flex flex-col md:col-span-2"><Image src={herounit} alt="hero" class="w-full h-[500px] object-cover" /></div>
+    <div>
+      <h1 class="text-7xl jersey font-bold text-[#F2F4FF]">DIGITAL SKRALDEDAG</h1>
+      <p class="text-7xl jersey font-bold text-[#88C8F9]">15. marts 2025</p>
+      <div class="flex justify-center mx-auto gap-6 p-6 md:max-w-7xl">
+        <div class="flex flex-col justify-center gap-4">
+          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-5xl">180</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Dage</div>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-5xl">19</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Timer</div>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-5xl">35</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Minutter</div>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[96px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-5xl">50</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Sekunder</div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between items-center md:flex-row gap:10">
+        <Button>Gem dato</Button>
+        <Button>Register din bidrag</Button>
+      </div>
+    </div>
+  </section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
+  <section></section>
 </MainLayout>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const targetDate = new Date("March 15, 2025 00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const timeRemaining = targetDate - now;
+
+      if (timeRemaining < 0) {
+        document.querySelector(".days").textContent = "00";
+        document.querySelector(".hours").textContent = "00";
+        document.querySelector(".minutes").textContent = "00";
+        document.querySelector(".seconds").textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Opdaterer HTML med de beregnede værdier
+      document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
+      document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
+      document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
+      document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
+    };
+
+    setInterval(updateCountdown, 1000);
+  });
+</script>
