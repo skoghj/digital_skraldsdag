@@ -1,0 +1,31 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import img from "../assets/images/register.svg";
+---
+
+<MainLayout title="Register">
+  <div class="flex flex-col mx-auto">
+    <section class="bg-[#009CFF] bg-opacity-10 w-full">
+      <div class="flex justify-center mx-auto pt-40 pb-20 lg:max-w-7xl">
+        <h1 class="text-5xl jersey font-bold text-[#F2F4FF]">DIGITAL OPRYDNINGSDAG</h1>
+      </div>
+      <div class="flex justify-center mx-auto lg:max-w-7xl gap-20">
+        <div class="flex flex-col justify-center gap-4">
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 items-center text-5xl jersey font-bold text-[#1DBF62]">15</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Dag</div>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 text-5xl items-center jersey font-bold text-[#1DBF62]">03</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">Månede</div>
+        </div>
+        <div class="flex flex-col justify-center gap-4">
+          <div class="border-none drop-shadow-md bg-[#182D40] bg-opacity-45 p-6 flex flex-col w-24 items-center text-5xl jersey font-bold text-[#1DBF62]">24</div>
+          <div class="flex flex-col items-center text-[#F2F4FF]">År</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <Image src={img} alt="img" class="md:w-full object-cover" />
+</MainLayout>
+<section></section>
