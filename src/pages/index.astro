@@ -4,6 +4,11 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import herounit from "../assets/images/eksemple.jpeg";
+import speedfiles from "../assets/images/speedfiles.webp";
+import devices from "../assets/images/devices.webp";
+import diskspace from "../assets/images/diskspace.webp";
+import security from "../assets/images/security.webp";
+import co2 from "../assets/images/co2.webp";
 ---
 
 <MainLayout title="Titel">
@@ -36,9 +41,54 @@ import herounit from "../assets/images/eksemple.jpeg";
       </div>
     </div>
   </section>
-  <section></section>
-  <section></section>
-  <section></section>
+  <section class="bg-[#163853] items-center justify-center w-full h-96">
+    <div class="mx-auto w-full px-10 max-w-3xl flex flex-col p-20">
+      <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvad er digital skraldedag?</h1>
+      <p>Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfordre enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse.</p>
+    </div>
+  </section>
+  <section class="">
+    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col p-20">
+      <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvorfor slippe af med digital declutter?</h1>
+      <div class="grid grid-cols-2 gap-10 md:flex flex-row justify-between">
+        <div class="flex flex-col gap-4">
+          <Image src={co2} alt="img" class="w-96 h-2/4 object-cover" />
+          <p>Hjælper med at reducere CO2-udledning</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Image src={devices} alt="img" class="w-96 h-2/4 object-cover" />
+          <p>Forlænger din enhedernes levetid</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Image src={speedfiles} alt="img" class="w-96 h-2/4 object-cover" />
+          <p>Fremskynder og forenkler informationsdeling og søgning</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Image src={security} alt="img" class="w-96 h-2/4 object-cover" />
+          <p>Reducerer datalagring sikkerhedsrisici</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <Image src={diskspace} alt="img" class="w-96 h-2/4 object-cover" />
+          <p>Øger disk og server kapacitet, hjælpe reducere omkostningerne</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col pt-10 md:grid grid-cols-7 grid-row-10">
+      <h1 class="col-start-1 col-end-8 row-start-1 row-end-2 mx-0 items-center justify-center p-4 border-2 border-solid border-gray-300">Fakta om digital affald</h1>
+      <p class="col-start-1 col-end-5 row-start-2 row-end-6 border-2 border-solid border-gray-300 p-4">På kun et år (2007) blev der skabt én zettabyte data på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papiret fra 20 billioner træer. Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</p>
+      <p class="col-start-5 col-end-8 row-start-2 row-end-3 border-2 border-solid border-gray-300 p-4">Det kræver mere energi at mine for BitCoin, end hele New Zealand bruger på et år!</p>
+      <p class="col-start-5 col-end-8 row-start-3 row-end-4 p-4 border-2 border-solid border-gray-300">Ubegrænset forbrug af data i dag kræver 3 gange mere energi end alle de solpaneler, verden kan producere!</p>
+      <p class="col-start-5 col-end-8 row-start-5 row-end-7 p-4 border-2 border-solid border-gray-300">I 2022 blev omkring 70 millioner servere brugt til at lagre data. Hver af dem forårsagede produktion af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til e-affald.</p>
+      <p class="col-start-5 col-end-8 row-start-4 row-end-5 p-4 border-2 border-solid border-gray-300">Internettet producerer mere end 900 millioner tons CO2 hvert år!</p>
+      <p class="col-start-1 col-end-5 row-start-4 row-end-5 p-4 border-2 border-solid border-gray-300">90 % af alle data er aldrig tilgået 3 måneder efter, at de er gemt.</p>
+      <p class="col-start-1 col-end-5 row-start-5 row-end-6 p-4 border-2 border-solid border-gray-300">Der sendes 320 milliarder e-mails hver dag og 62 billioner spam-e-mails hvert år = 20 millioner tons CO2!</p>
+      <p class="col-start-1 col-end-5 row-start-6 row-end-7 p-4 border-2 border-solid border-gray-300">Én e-mail udsender i gennemsnit 4g CO2 = CO2-fodaftrykket fra en pære tændt i 6 minutter!</p>
+      <p class="col-start-1 col-end-4 row-start-7 row-end-8 p-4 border-2 border-solid border-gray-300">99 % af dataene blev skabt inden for de sidste 10 år.</p>
+      <p class="col-start-4 col-end-8 row-start-7 row-end-8 p-4 border-2 border-solid border-gray-300">91 % af websiderne får ingen trafik fra Google.</p>
+    </div>
+  </section>
   <section></section>
   <section></section>
 </MainLayout>
