@@ -7,7 +7,7 @@ import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Register">
-  <div class="flex flex-col mx-auto">
+  <div class="flex flex-col mx-auto md:grid grid-cols-2">
     <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16">
       <div class="flex justify-center mx-auto w-full px-10 pt-32 pb-6 md:max-w-7xl">
         <h1 class="text-4xl jersey font-bold text-[#F2F4FF]">DIGITAL OPRYDNINGSDAG</h1>
@@ -34,65 +34,65 @@ import Link from "../components/Link.astro";
         </Button>
       </div>
       <Image src={img} alt="img" class="hidden md:block object-cover md:w-full" />
-      <div id="form">
-        <form class="flex flex-col w-full px-10 max-w-md mx-auto text-[#F2F4FF]">
-          <h1 class="text-3xl jersey font-bold md:text-5xl">Registrer din digitale oprydning</h1>
-          <div class="flex flex-col pt-10 py-2">
-            <label for="navn" class="pr-1 pb-1">Fornavn</label>
-            <input type="text" id="fornavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
-          </div>
-          <div class="flex flex-col py-2">
-            <label for="navn" class="pr-1 pb-1">Efternavn</label>
-            <input type="text" id="efternavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
-          </div>
-          <div class="flex flex-col py-2">
-            <label for="adresse" class="pb-1">Email-adresse</label>
-            <input type="text" id="Email-adresse" name="Email-adresse" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
-          </div>
-          <div class="flex flex-col md:flex-row py-2 gap-2">
-            <div class="flex-1">
-              <label for="country" class="pb-1">Land</label>
-              <select id="country" name="country" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2">
-                <option value="danmark">Danmark</option>
-                <option value="sweden">Sverige</option>
-                <option value="usa">USA</option>
-              </select>
-            </div>
-          </div>
-          <div class="flex flex-col py-2">
-            <label for="organisationsnavn" class="pb-1">Organisationens navn</label>
-            <input type="text" id="organisationsnavn" name="organisationsnavn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
-          </div>
-          <div class="flex flex-col py-2">
-            <label for="deltagere" class="pb-1">Antal deltagere</label>
-            <input type="text" id="deltagere" name="deltagere" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
-          </div>
-          <div class="pt-4">
-            <a href=" #">
-              <Button variant="primary" size="small"
-                >Tjek, dine digitale oprydningsliste!
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
-                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
-                </svg>
-              </Button>
-            </a>
-          </div>
-          <div class="flex flex-col py-2">
-            <label for="beløbGB" class="pb-1">Beløb slettet (i GB)</label>
-            <div class="relative w-full">
-              <input type="text" id="beløbGB" name="beløbGB" value="" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
-              <span class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-600"> GB </span>
-            </div>
-          </div>
-          <div class="py-4">
-            <input type="checkbox" class="accent-blue-500" />
-            <label for="betalning">Jeg vil gerne tilmelde mig nyheder fra World Clean up Day</label>
-          </div>
-          <Button variant="primary" size="medium">Register</Button>
-        </form>
-      </div>
+      <div id="form"></div>
     </section>
 
-    <section></section>
+    <section>
+      <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF]">
+        <h1 class="flex justify-center mx-auto w-full jersey font-bold text-4xl px-10 pt-32 pb-6 md:px-0">Registrer din digitale oprydning</h1>
+        <div class="flex flex-col pt-10 py-2">
+          <label for="navn" class="pr-1 pb-1">Fornavn</label>
+          <input type="text" id="fornavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+        </div>
+        <div class="flex flex-col py-2">
+          <label for="navn" class="pr-1 pb-1">Efternavn</label>
+          <input type="text" id="efternavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+        </div>
+        <div class="flex flex-col py-2">
+          <label for="adresse" class="pb-1">Email-adresse</label>
+          <input type="text" id="Email-adresse" name="Email-adresse" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+        </div>
+        <div class="flex flex-col md:flex-row py-2 gap-2">
+          <div class="flex-1">
+            <label for="country" class="pb-1">Land</label>
+            <select id="country" name="country" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2">
+              <option value="danmark">Danmark</option>
+              <option value="sweden">Sverige</option>
+              <option value="usa">USA</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex flex-col py-2">
+          <label for="organisationsnavn" class="pb-1">Organisationens navn</label>
+          <input type="text" id="organisationsnavn" name="organisationsnavn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+        </div>
+        <div class="flex flex-col py-2">
+          <label for="deltagere" class="pb-1">Antal deltagere</label>
+          <input type="text" id="deltagere" name="deltagere" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+        </div>
+        <div class="pt-4">
+          <a href=" #">
+            <Button variant="primary" size="small"
+              >Tjek, dine digitale oprydningsliste!
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+              </svg>
+            </Button>
+          </a>
+        </div>
+        <div class="flex flex-col py-2">
+          <label for="beløbGB" class="pb-1">Beløb slettet (i GB)</label>
+          <div class="relative w-full">
+            <input type="text" id="beløbGB" name="beløbGB" value="" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
+            <span class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-600"> GB </span>
+          </div>
+        </div>
+        <div class="py-4">
+          <input type="checkbox" class="accent-blue-500" />
+          <label for="betalning">Jeg vil gerne tilmelde mig nyheder fra World Clean up Day</label>
+        </div>
+        <Button variant="primary" size="medium">Register</Button>
+      </form>
+    </section>
   </div>
 </MainLayout>
