@@ -1,6 +1,45 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.webp";
+import files from "../assets/images/files.webp";
+import people from "../assets/images/people.webp";
+import co2 from "../assets/images/co2.webp";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<section class="bg-[#195073] w-full mx-auto">
+  <div class="flex gap-5 pt-10 pb-4 px-4 items-center">
+    <Image src={logo} alt="logo" class="w-40" />
+    <h1 class="text-3xl jersey font-bold text-[#F2F4FF]">Digital Oprydningsdag</h1>
+  </div>
+  <div class="flex py-4 px-10 items-center">
+    <p>Siden 2020 har <span class="font-bold">175 forskellige lande og territorier</span>deltaget i Digital Cleanup Day. Næsten 1,2 millioner mennesker har slettet <span class="font-bold"> over 14,5 millioner GB data</span>, hvilket forhindrer den årlige udledning af omkring <span class="font-bold"> 3.625 tons CO2.</span></p>
+  </div>
+  <div>
+    <h1 class="text-3xl jersey font-bold text-[#F2F4FF] px-4 pt-8 flex mx-auto justify-center">Digital Oprydningsdag i tal</h1>
+    <div class="flex px-4 justify-center items-center">
+      <Image src={people} alt="people" class="w-40" />
+      <div class="flex flex-col">
+        <h1 class="text-3xl jersey font-bold text-[#24EA78]">1,184,747</h1>
+        <p>Deltagere</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex px-4 justify-center items-center">
+      <Image src={files} alt="files" class="w-40" />
+      <div class="flex flex-col">
+        <h1 class="text-3xl jersey font-bold text-[#24EA78]">14.5M GB</h1>
+        <p>Data slettet</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex px-4 justify-center items-center">
+      <Image src={co2} alt="co2" class="w-40" />
+      <div class="flex flex-col">
+        <h1 class="text-3xl jersey font-bold text-[#24EA78]">3,625 tons</h1>
+        <p>Reduktion i årlig <br /> CO2-udledning</p>
+      </div>
+    </div>
+  </div>
+</section>
