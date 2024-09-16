@@ -13,36 +13,43 @@ import registerknap from "../assets/images/eksemple2.png";
 ---
 
 <MainLayout title="Titel">
-  <section class="flex flex-col mx-auto justify-center items-center pt-0 md:grid grid-cols-2 gap-10 w-full h-full md:pt-10">
-    <div class="flex flex-col w-full md:h-[400px] lg:h-[570px] bg-[#375488] pt-20 justify-end"><Image src={speedfiles} alt="hero" class="w-full object-contain" /></div>
-    <div class="flex flex-col justify-center items-center">
-      <h1 class="text-3xl flex flex-col mx-auto items-center justify-center sm:text-xl md:text-4xl lg:text-6xl jersey font-bold text-[#F2F4FF] md:mx-0">DIGITAL SKRALDEDAG</h1>
-      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start sm:text-xl md:text-4xl lg:text-6xl md:mx-0">15. marts 2025</p>
-      <div class="grid grid-cols-2 justify-start mx-0 gap-10 pt-4 items-center lg:flex">
+  <section class="flex flex-col relative mx-auto justify-center items-center pt-0 md:grid grid-cols-2 gap-10 w-full h-full md:pt-4">
+    <div class="relative col-span-1 w-full">
+      <div class="flex flex-col w-full bg-[#2B558C] justify-end">
+        <Image src={herounit} alt="hero" class="w-full max-h-[500px] object-contain" />
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center px-10">
+      <h1 class="text-3xl flex flex-col mx-auto items-center text-center justify-center md:text-4xl lg:text-6xl jersey font-bold text-[#F2F4FF]">DIGITAL SKRALDEDAG</h1>
+      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-4xl lg:text-6xl md:mx-0">15. marts 2025</p>
+
+      <div class="grid grid-cols-2 justify-start mx-0 gap-10 pt-4 items-center tablet:flex md:gap-4">
         <div class="flex flex-col justify-center gap-4">
-          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold md:text-4xl">180</div>
+          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">180</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Dage</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">19</div>
+          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">19</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Timer</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">35</div>
+          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">35</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Minutter</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">50</div>
+          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">50</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Sekunder</div>
         </div>
       </div>
       <div class="flex flex-col gap-10 pb-8 items-center md:flex-row pt-10">
         <Button>Gem dato</Button>
-        <Button>Register din bidrag</Button>
+        <Link variant="primary" size="small" href="/registrer">Register din bidrag</Link>
       </div>
     </div>
   </section>
-  <section class="bg-[#163853] items-center justify-center w-full h-96">
+
+  <section class="bg-[#163853] items-center justify-center w-full h-auto">
     <div class="mx-auto w-full px-10 max-w-3xl flex flex-col p-20">
       <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvad er digital skraldedag?</h1>
       <p>Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfordre enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse.</p>
@@ -94,12 +101,10 @@ import registerknap from "../assets/images/eksemple2.png";
     <div class="mx-auto w-full px-10 max-w-7xl relative">
       <Image src={registerknap} alt="img" class="w-full h-96 object-cover rounded-lg" />
       <div class="absolute inset-0 flex justify-center items-center">
-        <Button variant="primary" size="medium">Register din bidrag</Button>
+        <Button variant="primary" size="medium"><a href="/registrer">Register din bidrag</a> </Button>
       </div>
     </div>
   </section>
-
-  <section></section>
 </MainLayout>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
