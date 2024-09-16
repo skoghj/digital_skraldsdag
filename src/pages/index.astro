@@ -9,29 +9,30 @@ import devices from "../assets/images/devices.webp";
 import diskspace from "../assets/images/diskspace.webp";
 import security from "../assets/images/security.webp";
 import co2 from "../assets/images/co2.webp";
+import registerknap from "../assets/images/eksemple2.png";
 ---
 
 <MainLayout title="Titel">
-  <section class="flex flex-col mx-auto justify-center items-center md:grid grid-cols-3 gap-20 px-10">
-    <div class="flex flex-col md:col-span-2"><Image src={herounit} alt="hero" class="w-full h-[500px] object-cover" /></div>
-    <div class="flex flex-col justify-center">
-      <h1 class="text-3xl flex flex-col mx-auto items-center justify-center md:text-4xl jersey font-bold text-[#F2F4FF] md:mx-0 md:items-start">DIGITAL SKRALDEDAG</h1>
-      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-4xl md:mx-0 md:items-start">15. marts 2025</p>
-      <div class="grid grid-cols-2 justify-start mx-0 gap-6 pt-4 items-center lg:flex">
+  <section class="flex flex-col mx-auto justify-center items-center md:grid grid-cols-2 gap-20 w-full px-10">
+    <div class="flex flex-col w-full bg-[#2B558C] md:col-span-1"><Image src={herounit} alt="hero" class="w-full h-[500px] object-cover" /></div>
+    <div class="flex flex-col justify-center items-center">
+      <h1 class="text-3xl flex flex-col mx-auto items-center justify-center md:text-6xl jersey font-bold text-[#F2F4FF] md:mx-0 md:items-start">DIGITAL SKRALDEDAG</h1>
+      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-6xl md:mx-0 md:items-start">15. marts 2025</p>
+      <div class="grid grid-cols-2 justify-start mx-0 gap-10 pt-4 items-center lg:flex">
         <div class="flex flex-col justify-center gap-4">
-          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[60px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold md:text-4xl">180</div>
+          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold md:text-4xl">180</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Dage</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">19</div>
+          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">19</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Timer</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">35</div>
+          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">35</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Minutter</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">50</div>
+          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">50</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Sekunder</div>
         </div>
       </div>
@@ -89,9 +90,15 @@ import co2 from "../assets/images/co2.webp";
       <p class="col-start-4 col-end-8 row-start-7 row-end-8 p-4 border-2 border-solid border-[#88C8F9]">91 % af websiderne får ingen trafik fra Google.</p>
     </div>
   </section>
-  <section>
-    <Button variant="primary" size="medium">Register din bidrag</Button>
+  <section class="relative pb-20">
+    <div class="mx-auto w-full px-10 max-w-7xl relative">
+      <Image src={registerknap} alt="img" class="w-full h-96 object-cover rounded-lg" />
+      <div class="absolute inset-0 flex justify-center items-center">
+        <Button variant="primary" size="medium">Register din bidrag</Button>
+      </div>
+    </div>
   </section>
+
   <section></section>
 </MainLayout>
 <script>
