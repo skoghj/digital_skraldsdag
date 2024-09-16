@@ -5,7 +5,7 @@ import logo from "../assets/images/logo.webp";
 import Button from "../components/Button.astro";
 ---
 
-<div x-data="{ showmenu: false }" class="p-4 static lg:static w-full z-10 bg-[#182D40]">
+<div x-data="{ showmenu: false }" class="px-4 static top-0 lg:static w-full z-50 bg-[#182D40]">
   <div id="navbar" class="flex flex-row items-center justify-between md:px-4 md:py-2">
     <!-- Logo -->
     <div id="logo" class="flex-none">
@@ -35,7 +35,7 @@ import Button from "../components/Button.astro";
   </div>
 
   <!-- Mobile Menu -->
-  <nav id="mobilmenu" class="lg:hidden fixed top-18 left-0 w-full pb-20 bg-[#182D40] text-[#F2F4FF] flex flex-col pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+  <nav id="mobilmenu" class="lg:hidden sticky top-18 left-0 w-full pb-20 bg-[#182D40] text-[#F2F4FF] flex flex-col pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
     <ul class="flex flex-col items-center gap-4">
       <li class="hover:text-[#88C8F9]"><Link href="/">Hjem</Link></li>
       <li class="hover:text-[#88C8F9]"><Link href="/howTo">Hvordan man deltager</Link></li>
