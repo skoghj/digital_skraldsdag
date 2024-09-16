@@ -7,26 +7,56 @@ import herounit from "../assets/images/eksemple.jpeg";
 ---
 
 <MainLayout title="Titel">
-  <section class="flex flex-col mx-auto justify-center items-center md:grid grid-cols-3 gap-20 px-10">
-    <div class="flex flex-col md:col-span-2"><Image src={herounit} alt="hero" class="w-full h-[500px] object-cover" /></div>
+  <section
+    class="flex flex-col mx-auto justify-center items-center md:grid grid-cols-3 gap-20 px-10"
+  >
+    <div class="flex flex-col md:col-span-2">
+      <Image src={herounit} alt="hero" class="w-full h-[500px] object-cover" />
+    </div>
     <div class="flex flex-col justify-center">
-      <h1 class="text-3xl flex flex-col mx-auto items-center justify-center md:text-4xl jersey font-bold text-[#F2F4FF] md:mx-0 md:items-start">DIGITAL SKRALDEDAG</h1>
-      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-4xl md:mx-0 md:items-start">15. marts 2025</p>
-      <div class="grid grid-cols-2 justify-start mx-0 gap-6 pt-4 items-center lg:flex">
+      <h1
+        class="text-3xl flex flex-col mx-auto items-center justify-center md:text-4xl jersey font-bold text-[#F2F4FF] md:mx-0 md:items-start"
+      >
+        DIGITAL SKRALDEDAG
+      </h1>
+      <p
+        class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-4xl md:mx-0 md:items-start"
+      >
+        15. marts 2025
+      </p>
+      <div
+        class="grid grid-cols-2 justify-start mx-0 gap-6 pt-4 items-center lg:flex"
+      >
         <div class="flex flex-col justify-center gap-4">
-          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[60px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold md:text-4xl">180</div>
+          <div
+            class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[60px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold md:text-4xl"
+          >
+            180
+          </div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Dage</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">19</div>
+          <div
+            class="hours rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl"
+          >
+            19
+          </div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Timer</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">35</div>
+          <div
+            class="minutes rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl"
+          >
+            35
+          </div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Minutter</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
-          <div class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl">50</div>
+          <div
+            class="seconds rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[40px] flex items-center justify-center flex-col gap-1 px-3 text-[#1DBF62] jersey font-bold md:text-4xl"
+          >
+            50
+          </div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Sekunder</div>
         </div>
       </div>
@@ -59,15 +89,27 @@ import herounit from "../assets/images/eksemple.jpeg";
       }
 
       const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const hours = Math.floor(
+        (timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (timeRemaining % (1000 * 60 * 60)) / (1000 * 60)
+      );
       const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
       // Opdaterer HTML med de beregnede værdier
-      document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
-      document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
-      document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
-      document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
+      document.querySelector(".days").textContent = (
+        days < 10 ? "0" + days : days
+      ).toString();
+      document.querySelector(".hours").textContent = (
+        hours < 10 ? "0" + hours : hours
+      ).toString();
+      document.querySelector(".minutes").textContent = (
+        minutes < 10 ? "0" + minutes : minutes
+      ).toString();
+      document.querySelector(".seconds").textContent = (
+        seconds < 10 ? "0" + seconds : seconds
+      ).toString();
     };
 
     setInterval(updateCountdown, 1000);
