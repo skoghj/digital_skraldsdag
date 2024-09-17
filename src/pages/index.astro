@@ -3,20 +3,20 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import herounit from "../assets/images/hero_digital_skraldedag.svg";
+import herounit from "../assets/images/grafik_digital_skraldedag2.svg";
 import speedfiles from "../assets/images/speedfiles.webp";
 import devices from "../assets/images/devices.webp";
 import diskspace from "../assets/images/diskspace.webp";
 import security from "../assets/images/security.webp";
 import co2 from "../assets/images/co2.webp";
-import registerknap from "../assets/images/eksemple2.png";
+import registerknap from "../assets/images/registrer_grafik.svg";
 ---
 
 <MainLayout title="Titel">
   <section class="flex flex-col relative mx-auto justify-center items-center pt-0 md:grid grid-cols-2 gap-10 w-full h-full md:pt-4">
     <div class="relative col-span-1 w-full">
-      <div class="flex flex-col w-full bg-[#2B558C] justify-end">
-        <Image src={herounit} alt="hero" class="w-full max-h-[500px] object-contain" />
+      <div class="flex flex-col w-full justify-end">
+        <Image src={herounit} alt="hero" class="w-full max-h-[700px] object-contain" />
       </div>
     </div>
 
@@ -44,7 +44,7 @@ import registerknap from "../assets/images/eksemple2.png";
       </div>
       <div class="flex flex-col gap-10 pb-8 items-center md:flex-row pt-10">
         <Button>Gem dato</Button>
-        <Link variant="primary" size="small" href="/registrer">Register din bidrag</Link>
+        <Link variant="primary" size="small" href="/registrer">Register dit bidrag</Link>
       </div>
     </div>
   </section>
@@ -100,8 +100,8 @@ import registerknap from "../assets/images/eksemple2.png";
   <section class="relative pb-20">
     <div class="mx-auto w-full px-10 max-w-7xl relative">
       <Image src={registerknap} alt="img" class="w-full h-96 object-cover rounded-lg" />
-      <div class="absolute inset-0 flex justify-center items-center">
-        <Button variant="primary" size="medium"><a href="/registrer">Register din bidrag</a> </Button>
+      <div class="absolute inset-0 flex justify-center items-center pt-60">
+        <Button variant="primary" size="medium"><a href="/registrer">Register dit bidrag</a></Button>
       </div>
     </div>
   </section>
