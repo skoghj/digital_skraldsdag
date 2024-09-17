@@ -1,0 +1,60 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import placeholder1 from "../assets/images/placeholder1.svg";
+import placeholder2 from "../assets/images/placeholder2.svg";
+import placeholder3 from "../assets/images/placeholder3.svg";
+import placeholder4 from "../assets/images/placeholder4.svg";
+---
+
+<MainLayout>
+  <section class="grid md:grid-cols-3 p-20">
+    <div class="w-full grid md:col-start-2">
+      <form action="#" method="GET">
+        <div class="relative">
+          <input type="text" name="search" id="search" placeholder="Ressourcer og materialer" class="text-white jersey font-bold md:text-2xl w-full p-3 text-sm bg-[#195073] border border-[#9CD2E7] rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" />
+          <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 43 52" fill="none">
+                <path
+                  d="M8.60435 34.0613C4.67776 31.4672 1.88753 27.474 0.801786 22.8948C-0.283959 18.3157 0.41643 13.4948 2.76034 9.41394C5.10424 5.33304 8.91542 2.29894 13.4179 0.929408C17.9203 -0.440119 22.7755 -0.0420909 26.9947 2.04245C31.214 4.12699 34.4801 7.7413 36.1281 12.1494C37.7761 16.5576 37.682 21.4281 35.8649 25.7693C34.0479 30.1105 30.6445 33.5959 26.3479 35.5159C22.0512 37.4359 17.1843 37.6461 12.7382 36.1036L5.03275 51.7738L0.86962 49.717L8.61177 34.0832L8.60435 34.0613ZM5.67103 23.0924C6.25541 24.8181 7.17397 26.4117 8.37424 27.7824C9.57452 29.1531 11.033 30.2739 12.6665 31.0809C14.2999 31.8879 16.0763 32.3653 17.8943 32.4858C19.7122 32.6062 21.5361 32.3675 23.2617 31.7831C24.9874 31.1987 26.581 30.2802 27.9517 29.0799C29.3224 27.8796 30.4432 26.4211 31.2502 24.7877C32.0572 23.1542 32.5346 21.3778 32.6551 19.5599C32.7756 17.7419 32.5368 15.9181 31.9524 14.1924C30.7722 10.7073 28.2559 7.83374 24.957 6.20392C21.6581 4.5741 17.8469 4.32151 14.3617 5.50171C10.8766 6.68192 8.00306 9.19826 6.37324 12.4971C4.74341 15.796 4.49082 19.6073 5.67103 23.0924Z"
+                  fill="white"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="grid md:grid-cols-4 md:grid-rows-2 p-10 gap-10 md:gap-0">
+    <div class="m-auto">
+      <div class="flex gap-1 pb-3">
+        <h2 class="text-[#1DBF62] jersey font-bold text-5xl">01|</h2>
+        <h3 class="jersey font-bold text-3xl">Retningslinjer for enkeltpersoner</h3>
+      </div>
+      <Image src={placeholder1} alt="img" />
+    </div>
+    <div class="grid m-auto md:row-start-2 md:col-start-2 md:-mt-40">
+      <div class="flex gap-1 pb-3">
+        <h2 class="text-[#1DBF62] jersey font-bold text-5xl">02|</h2>
+        <h3 class="jersey font-bold text-3xl">Sådan rydder du op på din computer og drev</h3>
+      </div>
+      <Image src={placeholder2} alt="img" />
+    </div>
+    <div class="grid m-auto md:row-start-1 md:col-start-3">
+      <div class="flex gap-1 pb-3">
+        <h2 class="text-[#1DBF62] jersey font-bold text-5xl">03|</h2>
+        <h3 class="jersey font-bold text-3xl">Sådan rydder du op i dine e-mails</h3>
+      </div>
+      <Image src={placeholder3} alt="img" />
+    </div>
+    <div class="grid m-auto md:row-start-2 md:col-start-4 md:-mt-40">
+      <div class="flex gap-1 pb-3">
+        <h2 class="text-[#1DBF62] jersey font-bold text-5xl">04|</h2>
+        <h3 class="jersey font-bold text-3xl">Sådan rydder du op på din mobil og tablet</h3>
+      </div>
+      <Image src={placeholder4} alt="img" />
+    </div>
+  </section>
+</MainLayout>
