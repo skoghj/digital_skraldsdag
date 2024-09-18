@@ -11,7 +11,7 @@ import { Image } from "astro:assets";
 
 <MainLayout title="Hvordan man deltager">
   <section>
-    <div class="md:pt-10 m-8">
+    <div class="overskiftsection md:pt-10 m-8">
       <h1 class="text-5xl md:text-6xl jersey">
         Sådan laver du en digital oprydning
       </h1>
@@ -23,12 +23,12 @@ import { Image } from "astro:assets";
 
   <div class="relative">
     <div
-      class="hidden md:block absolute top-3 bottom-3 left-[66.5%] w-[1px] bg-[#AEC5D9]"
+      class="streg hidden md:block absolute top-3 bottom-3 left-[66.5%] w-[1px] bg-[#AEC5D9]"
     >
     </div>
 
     <!-- Trin 1 -->
-    <section class="p-3 md:mt-28 md:mb-48 relative">
+    <section class="trinboks1 p-3 md:mt-28 md:mb-60 relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
         <h1
           class="text-9xl jersey text-[#24EA78] text-center flex items-center justify-center md:col-span-1 md:text-[200px]"
@@ -75,13 +75,21 @@ import { Image } from "astro:assets";
                 til, hvordan du rydder op på din smartphone og tablet.
               </p>
             </p>
+
+            <Link
+              variant="primary"
+              size="small"
+              target="_blank"
+              href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+              >Se vejledning</Link
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- Trin 2 -->
-    <section class="p-3 md:mb-48 relative">
+    <section class="trinboks2 p-3 md:mb-60 relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
         <h1
           class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
@@ -120,7 +128,7 @@ import { Image } from "astro:assets";
     </section>
 
     <!-- Trin 3 -->
-    <section class="p-3 md:mb-48 relative">
+    <section class="trinboks3 p-3 md:mb-60 relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
         <h1
           class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
@@ -159,7 +167,7 @@ import { Image } from "astro:assets";
     </section>
 
     <!-- Trin 4 -->
-    <section class="p-3 mb-10 relative">
+    <section class="trinboks4 p-3 mb-20 relative">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
         <h1
           class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
@@ -197,4 +205,67 @@ import { Image } from "astro:assets";
       </div>
     </section>
   </div>
+
+  <script>
+    import { inView } from "motion";
+
+    const overskiftsection = document.querySelector(".overskiftsection");
+    inView(overskiftsection, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeInLeftBig",
+        "fadeInOpacity"
+      );
+    });
+
+    const streg = document.querySelector(".streg");
+    inView(streg, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeIn",
+        "fadeInOpacity",
+        "animate__delay-2s"
+      );
+    });
+
+    const trinboks1 = document.querySelector(".trinboks1");
+    inView(trinboks1, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeInRightBig",
+        "fadeInOpacity",
+        "animate__delay-1s"
+      );
+    });
+
+    const trinboks2 = document.querySelector(".trinboks2");
+    inView(trinboks2, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeInRightBig",
+        "fadeInOpacity",
+        "animate__delay-1s"
+      );
+    });
+
+    const trinboks3 = document.querySelector(".trinboks3");
+    inView(trinboks3, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeInRightBig",
+        "fadeInOpacity",
+        "animate__delay-1s"
+      );
+    });
+
+    const trinboks4 = document.querySelector(".trinboks4");
+    inView(trinboks4, ({ target }) => {
+      target.classList.add(
+        "animate__animated",
+        "animate__fadeInRightBig",
+        "fadeInOpacity",
+        "animate__delay-1s"
+      );
+    });
+  </script>
 </MainLayout>
