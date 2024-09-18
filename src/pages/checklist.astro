@@ -16,9 +16,9 @@ import Link from "../components/Link.astro";
 
     <!--first section-->
     <article class="flex flex-col justify-center items-center gap-6 text-[#F2F4FF]">
-      <div class="flex flex-col px-4 items-center justify-center w-[700px] md:grid grid-cols-2 gap-10 bg-black rounded-2xl md:px-6 py-6">
-        <div class="bg-[#182D40] p-4 rounded-md mx-auto">
-          <Image src={pc} alt="img" class="w-40 object-cover rounded-lg" />
+      <div class="flex flex-col px-4 items-center justify-center w-full md:w-[700px] md:grid grid-cols-2 gap-10 bg-[#060d26] rounded-2xl md:px-6 py-6">
+        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
+          <Image src={pc} alt="img" class="w-40 object-cover rounded-lg flip-x" />
         </div>
         <div class="flex flex-col px-4 gap-2 pt-4">
           <label class="container">
@@ -40,20 +40,22 @@ import Link from "../components/Link.astro";
           <p>
             Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
           </p>
-          <div>
-            <Link variant="checklist" size="standard" href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
-              >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+          <div class="py-4">
+            <a href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+              ><p class="flex gap-2 align-middle">
+                Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                </svg>
+              </p>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- second section -->
-      <div class="flex flex-col items-center justify-center md:grid grid-cols-2 bg-black rounded-2xl md:px-6 py-6 w-[700px] gap-10">
-        <div class="bg-[#182D40] p-4 rounded-md mx-auto">
-          <Image src={email} alt="img" class="w-40 object-cover rounded-lg" />
+      <div class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10">
+        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
+          <Image src={email} alt="img" class="w-40 object-cover rounded-lg flip-x2" />
         </div>
         <div class="flex flex-col items-start px-4 gap-2 pt-4">
           <label class="container">
@@ -75,20 +77,22 @@ import Link from "../components/Link.astro";
           <p>
             Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
           </p>
-          <div class="font-bold">
-            <Link variant="checklist" size="text" href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
-              >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+          <div class="py-4">
+            <a href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+              ><p class="flex gap-2 align-middle">
+                Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                </svg>
+              </p>
+            </a>
           </div>
         </div>
       </div>
 
       <!-- den third section -->
-      <div class="flex flex-col items-center justify-center md:grid grid-cols-2 bg-black rounded-2xl md:px-6 py-6 w-[700px] gap-10">
-        <div class="bg-[#182D40] p-4 rounded-md mx-auto">
-          <Image src={tablet} alt="img" class="w-40 object-cover rounded-lg" />
+      <div class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10">
+        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
+          <Image src={tablet} alt="img" class="w-40 object-cover rounded-lg flip-x3" />
         </div>
         <div class="flex flex-col px-4 gap-2 pt-4">
           <label class="container">
@@ -110,12 +114,14 @@ import Link from "../components/Link.astro";
           <p>
             Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
           </p>
-          <div>
-            <Link variant="checklist" size="text" href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
-              >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
-              </svg>
-            </Link>
+          <div class="py-4">
+            <a href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+              ><p class="flex gap-2 align-middle">
+                Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                </svg>
+              </p>
+            </a>
           </div>
         </div>
       </div>
@@ -130,3 +136,26 @@ import Link from "../components/Link.astro";
     </article>
   </section>
 </MainLayout>
+
+<script>
+  import { inView } from "motion";
+
+  // Cast to HTMLElement to access the style property
+  const ikonflip = document.querySelector(".flip-x") as HTMLElement;
+  inView(ikonflip, ({ target }) => {
+    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    (target as HTMLElement).style.setProperty("animation-delay", "0.1s"); // Delay for first element
+  });
+
+  const ikonflip2 = document.querySelector(".flip-x2") as HTMLElement;
+  inView(ikonflip2, ({ target }) => {
+    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    (target as HTMLElement).style.setProperty("animation-delay", "0.2s"); // Delay for second element
+  });
+
+  const ikonflip3 = document.querySelector(".flip-x3") as HTMLElement;
+  inView(ikonflip3, ({ target }) => {
+    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    (target as HTMLElement).style.setProperty("animation-delay", "0.3s"); // Delay for third element
+  });
+</script>
