@@ -43,7 +43,7 @@ import enterkey from "../assets/images/enter.svg";
       </div>
     </div>
     <div class="relative col-span-1 w-full">
-      <div class="flex flex-col w-full justify-end">
+      <div class="flex flex-col w-full justify-end animate__animated animate__slideInRight">
         <Image src={herounit} alt="hero" class="w-full max-h-[600px] object-contain" />
       </div>
     </div>
@@ -111,74 +111,85 @@ import enterkey from "../assets/images/enter.svg";
       <div class="col-start-4 col-end-5 row-start-2 row-end-4 p-4 border-2 border-solid border-[#88C8F9] justify-center items-center flex"><p><span class="text-xl font-bold text-[#88C8F9]">91% af hjemmesider</span> får ingen trafik fra Google.</p></div>
 
       <div class="col-start-6 col-end-7 row-start-7 row-end-8 p-4 border-2 border-solid md:border-r-0 border-[#88C8F9] justify-center items-center flex">
-        <Image src={enterkey} alt="img" class="w-60 md:w-full h-auto object-cover" />
+        <Image src={enterkey} alt="img" class="w-60 md:w-full h-auto object-cover enter cursor-pointer" />
       </div>
-
-      <section class="relative pb-20 registerklik">
-        <div class="mx-auto w-full px-10 max-w-7xl relative">
-          <Image src={registerknap} alt="img" class="w-full h-auto object-catainer rounded-lg" />
-          <div class="absolute inset-0 flex justify-center items-center top-28 md:top-[60%] animated__animate animate-pulse">
-            <Button variant="primary" size="medium"><a href="/registrer">Register dit bidrag</a></Button>
-          </div>
-        </div>
-      </section>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const targetDate = new Date("March 15, 2025 00:00:00").getTime();
-
-        const updateCountdown = () => {
-          const now = new Date().getTime();
-          const timeRemaining = targetDate - now;
-
-          if (timeRemaining < 0) {
-            document.querySelector(".days").textContent = "00";
-            document.querySelector(".hours").textContent = "00";
-            document.querySelector(".minutes").textContent = "00";
-            document.querySelector(".seconds").textContent = "00";
-            return;
-          }
-
-          const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-          const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-          // Opdaterer HTML med de beregnede værdier
-          document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
-          document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
-          document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
-          document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
-        };
-
-        setInterval(updateCountdown, 1000);
-      });
-
-      import { inView } from "motion";
-      const herosection = document.querySelector(".herosection");
-      inView(herosection, ({ target }) => {
-        target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
-      });
-
-      const digitalskraldedag = document.querySelector(".digitalskraldedag");
-      inView(digitalskraldedag, ({ target }) => {
-        target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
-      });
-
-      const registerklik = document.querySelector(".registerklik");
-      inView(registerklik, ({ target }) => {
-        target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
-      });
-
-      const removeskrald = document.querySelector(".removeskrald");
-      inView(removeskrald, ({ target }) => {
-        target.classList.add("animate__animated", "animate__slideInLeft", "fadeInOpacity");
-      });
-
-      const faktaboks = document.querySelector(".faktaboks");
-      inView(faktaboks, ({ target }) => {
-        target.classList.add("animate__animated", "animate__slideInRight", "fadeInOpacity");
-      });
-    </script>
+    <section class="relative pb-20 registerklik">
+      <div class="mx-auto w-full px-10 max-w-7xl relative">
+        <Image src={registerknap} alt="img" class="w-full h-auto object-catainer rounded-lg" />
+        <div class="absolute inset-0 flex justify-center items-center top-28 md:top-[60%] animated__animate animate-pulse">
+          <Button variant="primary" size="medium"><a href="/registrer">Register dit bidrag</a></Button>
+        </div>
+      </div>
+    </section>
   </section>
 </MainLayout>
+
+<script>
+  // Select the button with the class "enter"
+  const enterButton = document.querySelector(".enter");
+
+  // Define the function to show the alert
+  function myFunction() {
+    alert("Du har læst alle fakta! Deltag nu i digital oprydning.");
+  }
+
+  // Add an event listener to the button
+  enterButton.addEventListener("click", myFunction);
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const targetDate = new Date("March 15, 2025 00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const timeRemaining = targetDate - now;
+
+      if (timeRemaining < 0) {
+        document.querySelector(".days").textContent = "00";
+        document.querySelector(".hours").textContent = "00";
+        document.querySelector(".minutes").textContent = "00";
+        document.querySelector(".seconds").textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      // Opdaterer HTML med de beregnede værdier
+      document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
+      document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
+      document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
+      document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
+    };
+
+    setInterval(updateCountdown, 1000);
+  });
+
+  import { inView } from "motion";
+  const herosection = document.querySelector(".herosection");
+  inView(herosection, ({ target }) => {
+    target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
+  });
+
+  const digitalskraldedag = document.querySelector(".digitalskraldedag");
+  inView(digitalskraldedag, ({ target }) => {
+    target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
+  });
+
+  const registerklik = document.querySelector(".registerklik");
+  inView(registerklik, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");
+  });
+
+  const removeskrald = document.querySelector(".removeskrald");
+  inView(removeskrald, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInLeft", "fadeInOpacity");
+  });
+
+  const faktaboks = document.querySelector(".faktaboks");
+  inView(faktaboks, ({ target }) => {
+    target.classList.add("animate__animated", "animate__slideInRight", "fadeInOpacity");
+  });
+</script>
