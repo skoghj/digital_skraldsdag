@@ -4,11 +4,12 @@ import { Image } from "astro:assets";
 import img from "../assets/images/register.svg";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
+import registerimg from "../assets/images/registerpage.svg";
 ---
 
 <MainLayout title="Register">
   <div class="flex flex-col mx-auto md:grid grid-cols-2">
-    <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16">
+    <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16 animate__animated animate__slideInLeft">
       <div class="flex justify-center mx-auto w-full px-10 pt-32 pb-6 md:max-w-7xl">
         <h1 class="text-4xl jersey font-bold text-[#F2F4FF]">DIGITAL OPRYDNINGSDAG</h1>
       </div>
@@ -33,20 +34,20 @@ import Link from "../components/Link.astro";
           </svg>
         </Button>
       </div>
-      <Image src={img} alt="img" class="hidden md:block object-cover md:w-full" />
+      <Image src={registerimg} alt="img" class="hidden md:block object-cover md:w-full" />
       <div id="form"></div>
     </section>
 
     <section>
-      <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF]">
+      <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF] animate__animated animate__slideInRight">
         <h1 class="flex justify-center mx-auto w-full jersey font-bold text-4xl px-10 pt-32 pb-6 md:px-0">Registrer din digitale oprydning</h1>
         <div class="flex flex-col pt-10 py-2">
           <label for="navn" class="pr-1 pb-1">Fornavn</label>
-          <input type="text" id="fornavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+          <input type="text" id="fornavn" name="navn" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col py-2">
           <label for="navn" class="pr-1 pb-1">Efternavn</label>
-          <input type="text" id="efternavn" name="navn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+          <input type="text" id="efternavn" name="navn" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col py-2">
           <label for="adresse" class="pb-1">Email-adresse</label>
@@ -55,7 +56,7 @@ import Link from "../components/Link.astro";
         <div class="flex flex-col md:flex-row py-2 gap-2">
           <div class="flex-1">
             <label for="country" class="pb-1">Land</label>
-            <select id="country" name="country" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2">
+            <select id="country" name="country" class="w-full bg-white/90 text-slate-600 rounded-md border border-slate-300 px-3 py-2">
               <option value="danmark">Danmark</option>
               <option value="sweden">Sverige</option>
               <option value="usa">USA</option>
@@ -64,26 +65,167 @@ import Link from "../components/Link.astro";
         </div>
         <div class="flex flex-col py-2">
           <label for="organisationsnavn" class="pb-1">Organisationens navn</label>
-          <input type="text" id="organisationsnavn" name="organisationsnavn" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+          <input type="text" id="organisationsnavn" name="organisationsnavn" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col py-2">
           <label for="deltagere" class="pb-1">Antal deltagere</label>
-          <input type="text" id="deltagere" name="deltagere" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
+          <input type="text" id="deltagere" name="deltagere" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
-        <div class="pt-4">
-          <a href=" #">
-            <Link variant="primary" size="small" href="/checklist"
-              >Tjek, dine digitale oprydningsliste!
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
-                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
-              </svg>
-            </Link>
-          </a>
+        <div class="pt-4 animate-pulse">
+          <Link variant="primary" size="medium" href="/checklist">
+            Tjek, dine digitale oprydningsliste!
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+            </svg>
+          </Link>
         </div>
-        <div class="flex flex-col py-2">
+        <!--The Modal
+          <div id="myModal" class="modal hidden fixed z-50 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40">
+            Modal content
+            <div class="modal-content bg-white mx-auto my-20 p-6 border border-gray-300 w-4/5 rounded">
+              <span class="close text-gray-400 float-right text-2xl font-bold cursor-pointer">&times;</span>
+              <p>test test Some text in the Modal..</p>
+            </div>
+          </div>
+        </div>
+       modal trigger
+        <section>
+          <div class="relative flex py-4 flex-col items-center justify-center h-full max-w-4xl">
+            modal trigger
+            <div class="pt-4">
+              <label for="tw-modal" class="cursor-pointer text-xl w-full overflow-auto bg-[#1DBF62] hover:bg-[#24EA78] hover:text-[#072592] active:bg-[#87C8F8] text-[#182D40] font-bold px-4 py-4 rounded-lg shadow-md max-w-md text-center">Tjek, dine digitale oprydningsliste </label>
+            </div>
+            hidden toggle
+            <input type="checkbox" id="tw-modal" class="peer fixed appearance-none opacity-0" />
+
+            modal trigger
+            <label for="tw-modal" class="pointer-events-none invisible fixed inset-0 flex cursor-pointer items-center justify-center overflow-y-auto bg-slate-950/80 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:visible peer-checked:opacity-100 peer-checked:[&>*]:translate-y-0 peer-checked:[&>*]:scale-100 z-50">
+              <div class="p-10 bg-slate-50/70 flex flex-col justify-center mx-auto max-w-4xl">
+                
+               modal contents
+
+                <article class="flex flex-col mx-auto justify-center items-center gap-6 text-[#182D40]">
+                  <h1 class="flex w-full justify-center mx-auto text-[#182D40] jersey font-bold text-4xl px-4">TEJK, DINE DIGITALE OPRYDNINGSLISTE!</h1>
+                  <div class="flex flex-col px-4 items-center md:grid grid-cols-2 gap-4">
+                    <div class="bg-[#182D40] p-4 rounded-md mx-auto">
+                      <Image src={pc} alt="img" class="w-40 object-cover rounded-lg" />
+                    </div>
+                    <div class="flex flex-col px-4 gap-2 pt-4">
+                      <label class="container">
+                        <input type="checkbox" checked="checked" />
+                        <span class="checkmark"></span>Ryd op i midlertidige filer
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Organiser og sorter dine filer
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Sorter dine billeder og videoer
+                      </label>
+                      <label class="container"
+                        ><input type="checkbox" />
+                        <span class="checkmark"></span>Mål mængden af slettede data
+                      </label>
+                      <p>
+                        Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+                      </p>
+                      <div>
+                        <Link variant="checklist" size="text" href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
+                          >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  second section
+                  <div class="flex flex-col gap-4 items-center w-[600px] md:grid grid-cols-2">
+                    <div class="bg-[#182D40] p-4 rounded-md mx-auto">
+                      <Image src={email} alt="img" class="w-40 object-cover rounded-lg" />
+                    </div>
+                    <div class="flex flex-col items-start px-4 gap-2 pt-4">
+                      <label class="container">
+                        <input type="checkbox" checked="checked" />
+                        <span class="checkmark"></span>Ryd op i din indbakke
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Tøm papirkurven og automatiser dens rengøring
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Afmeld dig nyhedsbreve, du ikke læser eller ønsker
+                      </label>
+                      <label class="container"
+                        ><input type="checkbox" />
+                        <span class="checkmark"></span>Rapporter uønskede e-mails som SPAM
+                      </label>
+                      <p>
+                        Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+                      </p>
+                      <div class="font-bold">
+                        <Link variant="checklist" size="text" href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
+                          >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  den third section
+                  <div class="flex flex-col items-center gap-4 md:grid grid-cols-2">
+                    <div class="bg-[#182D40] p-4 rounded-md mx-auto">
+                      <Image src={tablet} alt="img" class="w-40 object-cover rounded-lg" />
+                    </div>
+                    <div class="flex flex-col px-4 gap-2 pt-4">
+                      <label class="container">
+                        <input type="checkbox" checked="checked" />
+                        <span class="checkmark"></span>Slet ubrugte programmer
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Ryd op i cachen
+                      </label>
+                      <label class="container">
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>Slet filer, du ikke har brug for
+                      </label>
+                      <label class="container"
+                        ><input type="checkbox" />
+                        <span class="checkmark"></span>Slet samtalehistorik
+                      </label>
+                      <p>
+                        Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+                      </p>
+                      <div>
+                        <Link variant="checklist" size="text" href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+                          >Hvordan man rydder op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pt-4 pb-10">
+                    <Link variant="primary" size="medium" href="/registrer"
+                      >Register din bidrag <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-[#182D40] hover:text-[#072592] active:bg-[#87C8F8]">
+                        <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd"></path>
+                        <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z"></path>
+                      </svg>
+                    </Link>
+                  </div>
+                </article>
+              </div>
+            </label>
+          </div> -->
+
+        <div class="flex flex-col w-full pt-4 pb-2">
           <label for="beløbGB" class="pb-1">Beløb slettet (i GB)</label>
           <div class="relative w-full">
-            <input type="text" id="beløbGB" name="beløbGB" value="" class="w-full bg-white/80 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
+            <input type="text" id="beløbGB" name="beløbGB" value="" class="w-full bg-white/90 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
             <span class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-600"> GB </span>
           </div>
         </div>
@@ -91,7 +233,7 @@ import Link from "../components/Link.astro";
           <input type="checkbox" class="accent-blue-500" />
           <label for="betalning">Jeg vil gerne tilmelde mig nyheder fra World Clean up Day</label>
         </div>
-        <Button variant="primary" size="medium">Register</Button>
+        <Button variant="primary" size="medium" id="myBtn">Register</Button>
       </form>
     </section>
   </div>
