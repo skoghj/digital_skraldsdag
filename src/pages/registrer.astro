@@ -9,7 +9,7 @@ import registerimg from "../assets/images/registerpage.svg";
 
 <MainLayout title="Register">
   <div class="flex flex-col mx-auto md:grid grid-cols-2">
-    <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16">
+    <section class="bg-[#009CFF] bg-opacity-10 w-full pb-16 animate__animated animate__slideInLeft">
       <div class="flex justify-center mx-auto w-full px-10 pt-32 pb-6 md:max-w-7xl">
         <h1 class="text-4xl jersey font-bold text-[#F2F4FF]">DIGITAL OPRYDNINGSDAG</h1>
       </div>
@@ -39,7 +39,7 @@ import registerimg from "../assets/images/registerpage.svg";
     </section>
 
     <section>
-      <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF]">
+      <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF] animate__animated animate__slideInRight">
         <h1 class="flex justify-center mx-auto w-full jersey font-bold text-4xl px-10 pt-32 pb-6 md:px-0">Registrer din digitale oprydning</h1>
         <div class="flex flex-col pt-10 py-2">
           <label for="navn" class="pr-1 pb-1">Fornavn</label>
@@ -71,7 +71,7 @@ import registerimg from "../assets/images/registerpage.svg";
           <label for="deltagere" class="pb-1">Antal deltagere</label>
           <input type="text" id="deltagere" name="deltagere" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
-        <div class="pt-4">
+        <div class="pt-4 animate-pulse">
           <Link variant="primary" size="medium" href="/checklist">
             Tjek, dine digitale oprydningsliste!
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-8">
@@ -237,6 +237,4 @@ import registerimg from "../assets/images/registerpage.svg";
       </form>
     </section>
   </div>
-
-  <script></script>
 </MainLayout>
