@@ -6,31 +6,24 @@ import people from "../assets/images/people.webp";
 import co2 from "../assets/images/co2.webp";
 ---
 
-<section class="flex flex-col items-center gap-10 bg-[#195073] md:grid grid-cols-2">
-  <div class="flex flex-col justify-center items-center pt-10 md:flex-row">
+<section class="flex flex-col items-center gap-4 bg-[#195073] md:grid grid-cols-2">
+  <div class="flex flex-col justify-center items-center p-10 sm:flex-column md:flex-row">
     <Image src={logo} alt="logo" class="w-40 md:w-60" />
     <div>
       <h1 class="text-3xl jersey font-bold text-center md:text-start md:pl-4">Digital Oprydningsdag</h1>
-      <p class="p-4">Siden 2020 har <span class="font-bold">175 forskellige lande og territorier</span> deltaget i Digital Cleanup Day. Næsten 1,2 millioner mennesker har slettet <span class="font-bold">over 14,5 millioner GB data</span>, hvilket forhindrer den årlige udledning af omkring <span class="font-bold">3.625 tons CO2.</span></p>
+      <p class="p-4 justify-center items-center">Siden 2020 har <span class="font-bold">175 forskellige lande og territorier</span> deltaget i Digital Cleanup Day. Næsten 1,2 millioner mennesker har slettet <span class="font-bold">over 14,5 millioner GB data</span>, hvilket forhindrer den årlige udledning af omkring <span class="font-bold">3.625 tons CO2.</span></p>
     </div>
   </div>
-  <div class="flex flex-col justify-between h-full md:items-start md:mx-auto pb-10">
-    <div class="flex items-center justify-center h-[20%] pt-10 md:pt-10">
+  <div class="flex flex-col justify-between md:items-start md:mx-auto pb-10">
+    <div class="flex items-center justify-center pt-4 md:pt-10">
       <h1 class="text-3xl jersey font-bold text-[#F2F4FF] px-4 pt-0 text-center md:items-start md:pt-4 md:pl-0">Digital Oprydningsdag i tal</h1>
     </div>
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 h-[80%]">
+    <div class="flex flex-col items-stretch md:flex-row justify-center gap-8">
       <div class="flex items-center md:flex-col">
         <Image src={people} alt="people" class="w-32" />
         <div>
-          <h2 class="text-2xl md:text-3xl jersey font-bold text-[#24EA78]">1,184,747</h2>
+          <h2 class="text-2xl items-end flex md:text-3xl jersey font-bold text-[#24EA78]">1,184,747</h2>
           <p class="text-center">Deltagere</p>
-        </div>
-      </div>
-      <div class="flex items-center md:flex-col">
-        <Image src={files} alt="files" class="w-32" />
-        <div>
-          <h2 class="text-2xl md:text-3xl jersey font-bold text-[#24EA78]">14.5M GB</h2>
-          <p class="text-center">Data slettet</p>
         </div>
       </div>
       <div class="flex items-center md:flex-col">
@@ -38,6 +31,13 @@ import co2 from "../assets/images/co2.webp";
         <div>
           <h2 class="text-2xl md:text-3xl jersey font-bold text-[#24EA78]">3,625 tons</h2>
           <p class="text-center">Reduktion i årlig<br />CO2-udledning</p>
+        </div>
+      </div>
+      <div class="flex items-center md:flex-col">
+        <Image src={files} alt="files" class="w-32" />
+        <div>
+          <h2 class="text-2xl md:text-3xl jersey font-bold text-[#24EA78]">14.5M GB</h2>
+          <p class="text-center">Data slettet</p>
         </div>
       </div>
     </div>

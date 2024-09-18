@@ -8,5 +8,19 @@
     font-family: "Jersey 25", system-ui;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 0.05em;
+  }
+  .color-change-2x {
+    animation: color-change-2x 2s linear infinite alternate both;
+  }
+
+  @keyframes color-change-2x {
+    0% {
+      background: #0a1b3f;
+    }
+
+    100% {
+      background: #057354;
+    }
   }
 }

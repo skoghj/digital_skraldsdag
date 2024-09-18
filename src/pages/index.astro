@@ -10,17 +10,19 @@ import diskspace from "../assets/images/diskspace.webp";
 import security from "../assets/images/security.webp";
 import co2 from "../assets/images/co2.webp";
 import registerknap from "../assets/images/registrer_grafik.svg";
+import enterkey from "../assets/images/enter.svg";
 ---
 
-<MainLayout title="Titel">
-  <section class="flex flex-col relative mx-auto justify-center items-center pt-0 md:grid grid-cols-2 gap-10 w-full h-full md:pt-4">
-    <div class="flex flex-col justify-center items-center px-10">
+<MainLayout title="Forside">
+  <section class="flex flex-col relative mx-auto justify-center items-center pt-6 md:grid grid-cols-2 gap-10 w-full h-full md:pt-6 lg:pt-2">
+    <div class="herosection flex flex-col justify-center items-center px-10">
+     
       <h1 class="text-3xl flex flex-col mx-auto items-center text-center justify-center md:text-4xl lg:text-6xl jersey font-bold text-[#F2F4FF]">DIGITAL SKRALDEDAG</h1>
-      <p class="text-3xl jersey font-bold text-[#88C8F9] mx-auto items-center justify-center md:justify-start md:text-4xl lg:text-6xl md:mx-0">15. marts 2025</p>
-
-      <div class="grid grid-cols-2 justify-start mx-0 gap-10 pt-4 items-center tablet:flex md:gap-4">
+      <p class="text-3xl jersey font-bold  mx-auto items-center justify-center md:justify-start md:text-4xl lg:text-6xl md:mx-0">15. marts 2025</p>
+  
+      <div class="grid grid-cols-2 justify-start mx-0 gap-10 pt-4 items-center tablet:flex md:gap-6">
         <div class="flex flex-col justify-center gap-4">
-          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 min-w-[80px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">180</div>
+          <div class="days rounded-s bg-black/25 backdrop-blur-sm py-3 px-3 min-w-[80px] flex items-center justify-center flex-col gap-1 text-[#1DBF62] jersey font-bold sm:text-3xl sm:min-w-[60px]">180</div>
           <div class="flex flex-col items-center text-[#F2F4FF]">Dage</div>
         </div>
         <div class="flex flex-col justify-center gap-4">
@@ -41,7 +43,6 @@ import registerknap from "../assets/images/registrer_grafik.svg";
         <Link variant="primary" size="small" href="/registrer">Register dit bidrag</Link>
       </div>
     </div>
-
     <div class="relative col-span-1 w-full">
       <div class="flex flex-col w-full justify-end">
         <Image src={herounit} alt="hero" class="w-full max-h-[600px] object-contain" />
@@ -49,91 +50,135 @@ import registerknap from "../assets/images/registrer_grafik.svg";
     </div>
   </section>
 
-  <section class="bg-[#163853] items-center justify-center w-full h-auto">
-    <div class="mx-auto w-full px-10 max-w-3xl flex flex-col p-20">
+  <section class="bg-[#163853] items-center justify-center w-full h-auto ">
+    <div class="mx-auto w-full px-10 max-w-3xl flex flex-col p-40 digitalskraldedag">
       <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvad er digital skraldedag?</h1>
       <p>Digital Cleanup Day er en dag dedikeret til at rydde op i vores digitale liv, ligesom vi rydder op i vores fysiske miljø på World Cleanup Day. Nu på sit femte år og organiseret af Let's Do It World, har Digital Cleanup Day til formål at øge bevidstheden om digital forurening og opfordre enkeltpersoner og virksomheder til at rydde op og omstrukturere deres online tilstedeværelse.</p>
     </div>
   </section>
+
   <section class="">
-    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col pt-20 pb-10">
-      <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvorfor slippe af med digital declutter?</h1>
+    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col pt-20 pb-10 removeskrald">
+      <h1 class="text-3xl jersey font-bold text-[#F2F4FF] pb-10 mx-auto md:text-4xl">Hvorfor fjerne digital skrald?</h1>
       <div class="grid grid-cols-2 gap-10 md:flex flex-row justify-between">
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 hover:animate-pulse">
           <Image src={co2} alt="img" class="w-96 h-2/4 object-cover" />
           <p>Hjælper med at reducere CO2-udledning</p>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 hover:animate-pulse">
           <Image src={devices} alt="img" class="w-96 h-2/4 object-cover" />
           <p>Forlænger din enhedernes levetid</p>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 hover:animate-pulse ">
           <Image src={speedfiles} alt="img" class="w-96 h-2/4 object-cover" />
           <p>Fremskynder og forenkler informationsdeling og søgning</p>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 hover:animate-pulse">
           <Image src={security} alt="img" class="w-96 h-2/4 object-cover" />
           <p>Reducerer datalagring sikkerhedsrisici</p>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 hover:animate-pulse">
           <Image src={diskspace} alt="img" class="w-96 h-2/4 object-cover" />
-          <p>Øger disk og server kapacitet, hjælpe reducere omkostningerne</p>
+          <p>Øger disk og server kapacitet</p>
         </div>
       </div>
     </div>
   </section>
+
   <section>
-    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col pt-4 pb-10 md:grid grid-cols-7 grid-row-10">
-      <h1 class="col-start-1 col-end-8 row-start-1 row-end-2 mx-0 text-4xl jersey font-bold items-center justify-center p-4 border-2 border-solid border-[#88C8F9] place-items-center text-center">Fakta om digital affald</h1>
-      <p class="col-start-1 col-end-5 row-start-2 row-end-6 border-2 border-solid border-[#88C8F9] p-4 justify-center items-center">På kun et år (2007) blev der skabt én zettabyte data på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papiret fra 20 billioner træer. Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</p>
-      <p class="col-start-5 col-end-8 row-start-2 row-end-3 border-2 border-solid border-[#88C8F9] p-4">Det kræver mere energi at mine for BitCoin, end hele New Zealand bruger på et år!</p>
-      <p class="col-start-5 col-end-8 row-start-3 row-end-4 p-4 border-2 border-solid border-[#88C8F9]">Ubegrænset forbrug af data i dag kræver 3 gange mere energi end alle de solpaneler, verden kan producere!</p>
-      <p class="col-start-5 col-end-8 row-start-5 row-end-7 p-4 border-2 border-solid border-[#88C8F9]">I 2022 blev omkring 70 millioner servere brugt til at lagre data. Hver af dem forårsagede produktion af 1-2 tons CO2. I det år blev omkring 20 millioner af dem til e-affald.</p>
-      <p class="col-start-5 col-end-8 row-start-4 row-end-5 p-4 border-2 border-solid border-[#88C8F9]">Internettet producerer mere end 900 millioner tons CO2 hvert år!</p>
-      <p class="col-start-1 col-end-5 row-start-4 row-end-5 p-4 border-2 border-solid border-[#88C8F9]">90 % af alle data er aldrig tilgået 3 måneder efter, at de er gemt.</p>
-      <p class="col-start-1 col-end-5 row-start-5 row-end-6 p-4 border-2 border-solid border-[#88C8F9]">Der sendes 320 milliarder e-mails hver dag og 62 billioner spam-e-mails hvert år = 20 millioner tons CO2!</p>
-      <p class="col-start-1 col-end-5 row-start-6 row-end-7 p-4 border-2 border-solid border-[#88C8F9]">Én e-mail udsender i gennemsnit 4g CO2 = CO2-fodaftrykket fra en pære tændt i 6 minutter!</p>
-      <p class="col-start-1 col-end-4 row-start-7 row-end-8 p-4 border-2 border-solid border-[#88C8F9]">99 % af dataene blev skabt inden for de sidste 10 år.</p>
-      <p class="col-start-4 col-end-8 row-start-7 row-end-8 p-4 border-2 border-solid border-[#88C8F9]">91 % af websiderne får ingen trafik fra Google.</p>
-    </div>
-  </section>
-  <section class="relative pb-20">
-    <div class="mx-auto w-full px-10 max-w-7xl relative">
-      <Image src={registerknap} alt="img" class="w-full h-96 object-cover rounded-lg" />
-      <div class="absolute inset-0 flex justify-center items-center pt-60">
-        <Button variant="primary" size="medium"><a href="/registrer">Register dit bidrag</a></Button>
+    <div class="mx-auto w-full px-10 max-w-7xl flex flex-col pt-2 pb-20 md:grid grid-cols-6 grid-row-7 faktaboks ">
+
+      <h1 class="col-start-1 col-end-4 row-start-1 row-end-2 mx-0 text-4xl jersey font-bold items-center justify-center flex p-4 border-2 border-solid md:border-l-0 border-[#88C8F9] text-center">Fakta om digital affald</h1>
+
+      <p class="col-start-1 col-end-3 row-start-2 row-end-5 border-2 border-solid md:border-l-0 border-[#88C8F9] p-4 justify-center items-center">På kun et år (2007) blev der skabt <span class="text-xl font-bold text-[#88C8F9]"> én zettabyte data</span> på verdensplan. I 2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000 zettabyte. For at udskrive en zettabyte data skal du bruge papir svarende til <span class="text-xl font-bold text-[#88C8F9]">20 billioner træer.</span> Der er kun omkring 3,5 billioner træer tilbage på planeten, så det er ikke muligt.</p>
+
+      <div class="col-start-5 col-end-7 row-start-2 row-end-4 border-2 border-solid md:border-r-0 border-[#88C8F9] p-4 items-center flex justify-center"><p>Det kræver mere <span class="text-xl font-bold text-[#88C8F9]">energi</span> at mine BitCoin, end hele New Zealand bruger på et år!</p></div>
+
+      <div class="col-start-4 col-end-7 row-start-1 row-end-2 p-4 border-2 border-solid md:border-r-0 border-[#88C8F9]">
+        <p> <span class="text-xl font-bold text-[#88C8F9]">Ubegrænset forbrug af data</span> i dag kræver <span class="text-xl font-bold text-[#88C8F9]">3 gange mere energi</span> end alle de solpaneler, verden kan producere!</p>
       </div>
+
+      <div class="col-start-3 col-end-5 row-start-4 row-end-6 p-4 border-2 border-solid border-[#88C8F9] justify-center items-center flex"><p> I 2022 blev omkring <span class="text-xl font-bold text-[#88C8F9]">70 millioner servere </span> brugt til at lagre data. Hver af dem forårsagede produktion af <span class="text-xl font-bold text-[#88C8F9]">1-2 tons CO2</span>. I det år blev omkring 20 millioner af dem til e-affald.</p></div>
+
+      <div class="col-start-3 col-end-4 row-start-6 row-end-8 p-4 border-2 border-solid border-[#88C8F9] justify-center items-center flex"><p>Internettet producerer mere end <span class="text-xl font-bold text-[#88C8F9]">900 millioner tons CO2 </span> hvert år!</p></div>
+
+      <div class="col-start-5 col-end-7 row-start-4 row-end-6 p-4 border-2 border-solid md:border-r-0 border-[#88C8F9] flex justify-center items-center"><p><span class="text-xl font-bold text-[#88C8F9]">90% af alle data </span> er aldrig tilgået 3 måneder efter, at de er gemt.</p></div>
+
+      <div class="col-start-1 col-end-3 row-start-5 row-end-8 p-4 border-2 border-solid md:border-l-0 border-[#88C8F9] justify-center items-center flex"><p>Der sendes <span class="text-xl font-bold text-[#88C8F9]">320 milliarder e-mails</span> hver dag og 62 billioner spam-e-mails hvert år = <span class="text-xl font-bold text-[#88C8F9]">20 millioner tons CO2!</span></p></div>
+
+      <div class="col-start-4 col-end-6 row-start-6 row-end-8 p-4 border-2 border-solid md:border-r-0 border-[#88C8F9] justify-center items-center flex"><p><span class="text-xl font-bold text-[#88C8F9]">Én e-mail</span> udsender i gennemsnit <span class="text-xl font-bold text-[#88C8F9]">4g CO2 = CO2-fodaftrykket</span> fra en pære tændt i 6 minutter!</p></div>
+
+      <div class="col-start-3 col-end-4 row-start-2 row-end-4 p-4 border-2 border-solid border-[#88C8F9] justify-center items-center flex"><p><span class="text-xl font-bold text-[#88C8F9]">99% af data</span> blev skabt inden for de sidste 10 år.</p></div>
+
+      <div class="col-start-4 col-end-5 row-start-2 row-end-4 p-4 border-2 border-solid border-[#88C8F9] justify-center items-center flex"><p><span class="text-xl font-bold text-[#88C8F9]">91% af hjemmesider</span> får ingen trafik fra Google.</p></div>
+
+      <div class="col-start-6 col-end-7 row-start-7 row-end-8 p-4 border-2 border-solid md:border-r-0 border-[#88C8F9] justify-center items-center flex">
+        <Image src={enterkey} alt="img" class=" w-60 md:w-full h-auto object-cover" / >       
+      </div>
+      
     </div>
+
+    <section class="relative pb-20 registerklik">
+      <div class="mx-auto w-full px-10 max-w-7xl relative">
+        <Image src={registerknap} alt="img" class="w-full h-auto object-catainer rounded-lg" />
+        <div class="absolute inset-0 flex justify-center items-center top-28 md:top-[60%]  animated__animate animate-pulse">
+          <Button variant="primary" size="medium"><a href="/registrer" >Register dit bidrag</a></Button>
+        </div>
+      </div>
+    </section>
   </section>
-</MainLayout>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const targetDate = new Date("March 15, 2025 00:00:00").getTime();
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const targetDate = new Date("March 15, 2025 00:00:00").getTime();
 
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const timeRemaining = targetDate - now;
+      const updateCountdown = () => {
+        const now = new Date().getTime();
+        const timeRemaining = targetDate - now;
 
-      if (timeRemaining < 0) {
-        document.querySelector(".days").textContent = "00";
-        document.querySelector(".hours").textContent = "00";
-        document.querySelector(".minutes").textContent = "00";
-        document.querySelector(".seconds").textContent = "00";
-        return;
-      }
+        if (timeRemaining < 0) {
+          document.querySelector(".days").textContent = "00";
+          document.querySelector(".hours").textContent = "00";
+          document.querySelector(".minutes").textContent = "00";
+          document.querySelector(".seconds").textContent = "00";
+          return;
+        }
 
-      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-      // Opdaterer HTML med de beregnede værdier
-      document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
-      document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
-      document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
-      document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
-    };
+        // Opdaterer HTML med de beregnede værdier
+        document.querySelector(".days").textContent = (days < 10 ? "0" + days : days).toString();
+        document.querySelector(".hours").textContent = (hours < 10 ? "0" + hours : hours).toString();
+        document.querySelector(".minutes").textContent = (minutes < 10 ? "0" + minutes : minutes).toString();
+        document.querySelector(".seconds").textContent = (seconds < 10 ? "0" + seconds : seconds).toString();
+      };
 
-    setInterval(updateCountdown, 1000);
+      setInterval(updateCountdown, 1000);
+    });
+
+
+
+  import { inView } from "motion";
+  const herosection = document.querySelector(".herosection");
+  inView(herosection, ({ target }) => {
+    target.classList.add("animate__animated", "animate__fadeInLeft", "fadeInOpacity");
   });
-</script>
+
+  const digitalskraldedag = document.querySelector(".digitalskraldedag");
+  inView(digitalskraldedag, ({ target }) => {
+    target.classList.add("animate__animated", "animate__fadeInRight", "fadeInOpacity");
+  });
+
+  const registerklik = document.querySelector(".registerklik");
+  inView(registerklik,({target})=>{target.classList.add("animate__animated", "animate__slideInUp", "fadeInOpacity");});
+
+  const removeskrald = document.querySelector(".removeskrald");
+  inView(removeskrald,({target})=>{target.classList.add("animate__animated", "animate__slideInLeft", "fadeInOpacity");});
+
+  const faktaboks = document.querySelector(".faktaboks");
+  inView(faktaboks,({target})=>{target.classList.add("animate__animated", "animate__slideInDown", "fadeInOpacity");});
+
+  </script>
+</MainLayout>
