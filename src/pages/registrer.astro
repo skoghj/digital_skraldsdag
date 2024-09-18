@@ -4,10 +4,7 @@ import { Image } from "astro:assets";
 import img from "../assets/images/register.svg";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-
-import email from "../assets/images/gr_email.svg";
-import pc from "../assets/images/gr_pccloud.svg";
-import tablet from "../assets/images/gr_tabletmobil.svg";
+import registerimg from "../assets/images/registerpage.svg";
 ---
 
 <MainLayout title="Register">
@@ -37,7 +34,7 @@ import tablet from "../assets/images/gr_tabletmobil.svg";
           </svg>
         </Button>
       </div>
-      <Image src={img} alt="img" class="hidden md:block object-cover md:w-full" />
+      <Image src={registerimg} alt="img" class="hidden md:block object-cover md:w-full" />
       <div id="form"></div>
     </section>
 
