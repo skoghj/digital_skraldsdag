@@ -2,16 +2,16 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-import smartphone from "../assets/images/smartphone.webp";
-import desktop from "../assets/images/desktop.webp";
-import email from "../assets/images/email.webp";
-import cloud from "../assets/images/cloud.webp";
+import smartphone from "../assets/images/bl_tabletmobil.svg";
+import desktop from "../assets/images/pc.svg";
+import email from "../assets/images/bl_email.svg";
+import cloud from "../assets/images/cloud.svg";
 import { Image } from "astro:assets";
 ---
 
 <MainLayout title="Hvordan man deltager">
   <section>
-    <div class="pt-28 md:pt-10 m-8">
+    <div class="md:pt-10 m-8">
       <h1 class="text-5xl md:text-6xl jersey">
         Sådan laver du en digital oprydning
       </h1>
@@ -21,157 +21,180 @@ import { Image } from "astro:assets";
     </div>
   </section>
 
-  <!-- Trin 1 -->
-  <section class="p-3 md:mt-28 md:mb-48">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-      <h1
-        class="text-9xl jersey text-[#1DBF62] text-center flex items-center justify-center md:col-span-1"
-      >
-        01
-      </h1>
-      <div
-        class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex items-center md:mr-6"
-      >
-        <div class="flex flex-col w-full">
-          <div class="flex items-center justify-center pt-8 mb-8">
-            <Image src={smartphone} alt="img" />
+  <div class="relative">
+    <div
+      class="hidden md:block absolute top-3 bottom-3 left-[66.5%] w-[1px] bg-[#AEC5D9]"
+    >
+    </div>
+
+    <!-- Trin 1 -->
+    <section class="p-3 md:mt-28 md:mb-48 relative">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <h1
+          class="text-9xl jersey text-[#24EA78] text-center flex items-center justify-center md:col-span-1 md:text-[200px]"
+        >
+          01
+        </h1>
+        <div
+          class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col md:flex-row items-center md:items-center md:justify-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <div class="flex-shrink-0 flex justify-center items-center">
+            <Image src={smartphone} alt="img" class="object-cover" />
           </div>
-          <h2 class="text-2xl mb-4 jersey text-[#1DBF62] text-center">
-            RYD OP PÅ DIN SMARTPHONE
-          </h2>
-          <p class="mb-8">
-            Fjern alle de apps, du ikke har brugt i et stykke tid, eller kun har
-            brugt få gange. Vær ærlig og modig! Slet alle de unødvendige,
-            glemte, gamle apps og spil, som du har downloadet, men endnu ikke
-            rigtig prøvet. Chancen for, at du pludselig vil begynde at bruge dem
-            senere, er meget lille! De bruger energi, selv når de ikke er i
-            brug, og kan forbruge hundredvis af megabytes under månedlige
-            opdateringer.
-            <p>
-              Husk også at slette brugerkonti (inklusive e-mails) og tilknyttede
-              data, som du oprettede, da du var 15, og som du ikke har tilgået i
-              årtier! Det vil gøre din telefon hurtigere og forlænge batteriets
-              levetid. Det er altid en fordel at have så få apps som nødvendigt.
+          <div class="flex flex-col w-full text-left md:text-left">
+            <h2
+              class="text-2xl mb-4 jersey text-[#24EA78] text-center md:text-left"
+            >
+              RYD OP PÅ DIN SMARTPHONE
+            </h2>
+            <p class="mb-8">
+              Fjern alle de apps, du ikke har brugt i et stykke tid, eller kun
+              har brugt få gange. Vær ærlig og modig! Slet alle de unødvendige,
+              glemte, gamle apps og spil, som du har downloadet, men endnu ikke
+              rigtig prøvet. Chancen for, at du pludselig vil begynde at bruge
+              dem senere, er meget lille! De bruger energi, selv når de ikke er
+              i brug, og kan forbruge hundredvis af megabytes under månedlige
+              opdateringer.
+              <p>
+                Husk også at slette brugerkonti (inklusive e-mails) og
+                tilknyttede data, som du oprettede, da du var 15, og som du ikke
+                har tilgået i årtier! Det vil gøre din telefon hurtigere og
+                forlænge batteriets levetid. Det er altid en fordel at have så
+                få apps som nødvendigt.
+              </p>
+              <br />
+              <p>
+                Gennemgå dine fotos og videoer. Ved at slette de unødvendige og
+                eventuelle dubletter kan du frigøre adskillige gigabyte af
+                værdifuld lagerplads. <a
+                  href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+                  target="_blank"
+                  class="text-[#24EA78] underline hover:text-[#88C8F9]"
+                  >Se vejledningen</a
+                >
+                til, hvordan du rydder op på din smartphone og tablet.
+              </p>
             </p>
-            <br />
-            <p>
-              Gennemgå dine fotos og videoer. Ved at slette de unødvendige og
-              eventuelle dubletter kan du frigøre adskillige gigabyte af
-              værdifuld lagerplads. <a
-                href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trin 2 -->
+    <section class="p-3 md:mb-48 relative">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <h1
+          class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
+        >
+          02
+        </h1>
+        <div
+          class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col md:flex-row items-center md:items-center md:justify-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <div class="flex-shrink-0 flex justify-center items-center">
+            <Image src={desktop} alt="img" class="object-cover" />
+          </div>
+          <div class="flex flex-col w-full text-left md:text-left">
+            <h2
+              class="text-2xl mb-4 jersey text-[#24EA78] text-center md:text-left"
+            >
+              RYD OP PÅ DIN COMPUTERS HARDDISK
+            </h2>
+            <p class="mb-8">
+              Sortér din personlige computer og slet filer, der er dubletter
+              eller blevet unødvendige. Gennemgå alle dine fotos og slet
+              dubletter og slørede billeder. Tjek videofilerne og slet de sete
+              eller unødvendige. Arkiver de vigtige filer. Vær forberedt på at
+              finde virkelig fantastiske ting på din computer!
+              <a
+                href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
                 target="_blank"
-                class="text-[#1DBF62] underline hover:text-[#88C8F9]"
+                class="text-[#24EA78] underline hover:text-[#88C8F9]"
                 >Se vejledningen</a
-              > til, hvordan du rydder op på din smartphone og tablet.
+              >
+              til, hvordan du rydder op på din computer og harddisk.
             </p>
-          </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Trin 2 -->
-  <section class="p-3 md:mb-48">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-      <h1
-        class="text-9xl jersey text-[#1DBF62] flex items-center justify-center md:col-span-1"
-      >
-        02
-      </h1>
-      <div
-        class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col justify-center md:mr-6"
-      >
-        <div class="flex items-center justify-center pt-8 mb-8">
-          <Image src={desktop} alt="img" />
+    <!-- Trin 3 -->
+    <section class="p-3 md:mb-48 relative">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <h1
+          class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
+        >
+          03
+        </h1>
+        <div
+          class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col md:flex-row items-center md:items-center md:justify-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <div class="flex-shrink-0 flex justify-center items-center">
+            <Image src={email} alt="img" class="object-cover" />
+          </div>
+          <div class="flex flex-col w-full text-left md:text-left">
+            <h2
+              class="text-2xl mb-4 jersey text-[#24EA78] text-center md:text-left"
+            >
+              RYD OP I DIN INDBAKKE
+            </h2>
+            <p class="mb-8">
+              Filtrer e-mails efter den ældste og arkiver dem. Afmeld
+              nyhedsbreve, du ikke engang læser. Vælg lange samtaler, vælg den
+              nyeste og slet alt andet! Søg efter almindelige navne, adresser og
+              ord for at samle lignende e-mails, så du kan håndtere dem samlet.
+              Vær modig og klik på slet-knappen.
+              <a
+                href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
+                target="_blank"
+                class="text-[#24EA78] underline hover:text-[#88C8F9]"
+                >Se vejledningen</a
+              >
+              til, hvordan du rydder op i din indbakke!
+            </p>
+          </div>
         </div>
-        <h2 class="text-2xl mb-4 jersey text-[#1DBF62] text-center">
-          RYD OP PÅ DIN COMPUTERS HARDDISK
-        </h2>
-        <p class="mb-8">
-          Sortér din personlige computer og slet filer, der er dubletter eller
-          blevet unødvendige. Gennemgå alle dine fotos og slet dubletter og
-          slørede billeder. Tjek videofilerne og slet de sete eller unødvendige.
-          Arkiver de vigtige filer. Vær forberedt på at finde virkelig
-          fantastiske ting på din computer!
-          <a
-            href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
-            target="_blank"
-            class="text-[#1DBF62] underline hover:text-[#88C8F9]"
-            >Se vejledningen</a
-          > til, hvordan du rydder op på din computer og harddisk.
-        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Trin 3 -->
-  <section class="p-3 md:mb-48">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-      <h1
-        class="text-9xl jersey text-[#1DBF62] flex items-center justify-center md:col-span-1"
-      >
-        03
-      </h1>
-      <div
-        class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col justify-center md:mr-6"
-      >
-        <div class="flex items-center justify-center pt-8 mb-8">
-          <Image src={email} alt="img" />
+    <!-- Trin 4 -->
+    <section class="p-3 mb-10 relative">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <h1
+          class="text-9xl jersey text-[#24EA78] flex items-center justify-center md:col-span-1 md:text-[200px]"
+        >
+          04
+        </h1>
+        <div
+          class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col md:flex-row items-center md:items-center md:justify-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <div class="flex-shrink-0 flex justify-center items-center">
+            <Image src={cloud} alt="img" class="object-cover" />
+          </div>
+          <div class="flex flex-col w-full text-left md:text-left">
+            <h2
+              class="text-2xl mb-4 jersey text-[#24EA78] text-center md:text-left"
+            >
+              LAV NYE ORDNINGER
+            </h2>
+            <p class="mb-8">
+              Brug flere coworking-områder i stedet for at sende e-mails. Stop
+              med at sende 'ok' og 'tak' e-mails! Opbevar de vigtige filer i et
+              enkelt cloud-miljø, så du ikke behøver at have den samme fil på
+              hver computer. Tænk dig om, før du sikkerhedskopierer. Skab mindre
+              ‘hurtigt indhold’ og vær mere bevidst omkring dine videoer og
+              fotos. Sørg for kun at sikkerhedskopiere de filer, du virkelig har
+              brug for, og kun de fotos, du elsker.
+              <br /><br />
+              Små ændringer i dine internetvaner, såsom at slukke for video under
+              et virtuelt møde, reducere kvaliteten af streamingtjenester, mindske
+              spiltiden, begrænse tid på sociale medier og afmelde nyhedsbreve og
+              e-maillister, kan markant reducere dit miljøaftryk!
+            </p>
+          </div>
         </div>
-        <h2 class="text-2xl mb-4 jersey text-[#1DBF62] text-center">
-          RYD OP I DIN INDBAKKE
-        </h2>
-        <p class="mb-8">
-          Filtrer e-mails efter den ældste og arkiver dem. Afmeld nyhedsbreve,
-          du ikke engang læser. Vælg lange samtaler, vælg den nyeste og slet alt
-          andet! Søg efter almindelige navne, adresser og ord for at samle
-          lignende e-mails, så du kan håndtere dem samlet. Vær modig og klik på
-          slet-knappen. <a
-            href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
-            target="_blank"
-            class="text-[#1DBF62] underline hover:text-[#88C8F9]"
-            >Se vejledningen</a
-          > til, hvordan du rydder op i din indbakke!
-        </p>
       </div>
-    </div>
-  </section>
-
-  <!-- Trin 4 -->
-  <section class="p-3 mb-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-      <h1
-        class="text-9xl jersey text-[#1DBF62] flex items-center justify-center md:col-span-1"
-      >
-        04
-      </h1>
-      <div
-        class="bg-[#195073] border-2 border-[#AEC5D9] p-4 md:col-span-2 flex flex-col justify-center md:mr-6"
-      >
-        <div class="flex items-center justify-center pt-8 mb-8">
-          <Image src={cloud} alt="img" />
-        </div>
-        <h2 class="text-2xl mb-4 jersey text-[#1DBF62] text-center">
-          LAV NYE ORDNINGER
-        </h2>
-        <p class="">
-          Brug flere coworking-områder i stedet for at sende e-mails. Stop med
-          at sende 'ok' og 'tak' e-mails! Opbevar de vigtige filer i et enkelt
-          cloud-miljø, så du ikke behøver at have den samme fil på hver
-          computer. Tænk dig om, før du sikkerhedskopierer. Skab mindre ‘hurtigt
-          indhold’ og vær mere bevidst omkring dine videoer og fotos. Sørg for
-          kun at sikkerhedskopiere de filer, du virkelig har brug for, og kun de
-          fotos, du elsker.
-          <br />
-          <br />
-          <p>
-            Små ændringer i dine internetvaner, såsom at slukke for video under
-            et virtuelt møde, reducere kvaliteten af streamingtjenester, mindske
-            spiltiden, begrænse tid på sociale medier og afmelde nyhedsbreve og
-            e-maillister, kan markant reducere dit miljøaftryk!
-          </p>
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </MainLayout>
