@@ -9,24 +9,51 @@ import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Tjekliste">
-  <section class="flex flex-col justify-center items-center mx-auto w-full px-4 overflow-x-hidden md:max-w-4xl">
-    <h1 class="flex w-full justify-center mx-auto text-[#F2F4FF] jersey font-bold text-4xl pt-20 pb-10">TJEK, DINE DIGITALE OPRYDNINGSLISTE!</h1>
+  <section
+    class="flex flex-col justify-center items-center mx-auto w-full px-4 overflow-x-hidden md:max-w-4xl"
+  >
+    <h1
+      class="flex w-full justify-center mx-auto text-[#F2F4FF] jersey font-bold text-4xl pt-20 pb-10"
+    >
+      TJEK, DIN DIGITALE OPRYDNINGSLISTE!
+    </h1>
 
     <div class="progress-bar pb-10 w-full">
       <div class="bg-gray-200 rounded-full dark:bg-gray-700">
-        <div id="progress-bar" class="bg-[#1DBF62] text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full" style="width: 0%">0%</div>
+        <div
+          id="progress-bar"
+          class="bg-[#1DBF62] text-xs font-medium text-blue-100 text-center p-1 leading-none rounded-full"
+          style="width: 0%"
+        >
+          0%
+        </div>
       </div>
     </div>
 
     <!--first section-->
-    <article class="flex flex-col justify-center items-center gap-6 text-[#F2F4FF]">
-      <div class="flex flex-col px-4 items-center justify-center w-full md:w-[700px] md:grid grid-cols-2 gap-10 bg-[#060d26] rounded-2xl md:px-6 py-6 computerclean">
-        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
-          <Image src={pc} alt="img" class="w-40 object-cover rounded-lg flip-x" />
+    <article
+      class="flex flex-col justify-center items-center gap-6 text-[#F2F4FF]"
+    >
+      <div
+        class="flex flex-col px-4 items-center justify-center w-full md:w-[700px] md:grid grid-cols-2 gap-10 bg-[#060d26] rounded-2xl md:px-6 py-6 computerclean"
+      >
+        <div
+          class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto"
+        >
+          <Image
+            src={pc}
+            alt="img"
+            class="w-40 object-cover rounded-lg flip-x"
+          />
         </div>
         <div class="flex flex-col px-4 gap-2 pt-4">
           <label class="container">
-            <input type="checkbox" checked="checked" class="task-checkbox" data-progress="8.33" />
+            <input
+              type="checkbox"
+              checked="checked"
+              class="task-checkbox"
+              data-progress="8.33"
+            />
             <span class="checkmark"></span>Ryd op i midlertidige filer
           </label>
           <label class="container">
@@ -38,17 +65,35 @@ import Link from "../components/Link.astro";
             <span class="checkmark"></span>Sorter dine billeder og videoer
           </label>
           <label class="container"
-            ><input type="checkbox" class="task-checkbox" data-progress="8.33" />
+            ><input
+              type="checkbox"
+              class="task-checkbox"
+              data-progress="8.33"
+            />
             <span class="checkmark"></span>Mål mængden af slettede data
           </label>
           <p>
-            Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+            Antal data du slettet: <input
+              type="text"
+              value="0"
+              class="border-0 border-b-2 w-20 text-center bg-transparent p-0"
+            /> GB
           </p>
           <div class="py-4">
-            <a href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+            <a
+              href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
+              class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
               ><p class="flex gap-2 align-middle">
-                Sådan rydder du op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                Sådan rydder du op <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                    clip-rule="evenodd"></path>
                 </svg>
               </p>
             </a>
@@ -57,9 +102,17 @@ import Link from "../components/Link.astro";
       </div>
 
       <!-- second section -->
-      <div class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10 emailclean">
-        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
-          <Image src={email} alt="img" class="w-40 object-cover rounded-lg flip-x2" />
+      <div
+        class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10 emailclean"
+      >
+        <div
+          class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto"
+        >
+          <Image
+            src={email}
+            alt="img"
+            class="w-40 object-cover rounded-lg flip-x2"
+          />
         </div>
         <div class="flex flex-col items-start px-4 gap-2 pt-4">
           <label class="container">
@@ -68,24 +121,44 @@ import Link from "../components/Link.astro";
           </label>
           <label class="container">
             <input type="checkbox" class="task-checkbox" data-progress="8.33" />
-            <span class="checkmark"></span>Tøm papirkurven og automatiser dens rengøring
+            <span class="checkmark"></span>Tøm papirkurven og automatiser dens
+            rengøring
           </label>
           <label class="container">
             <input type="checkbox" class="task-checkbox" data-progress="8.33" />
-            <span class="checkmark"></span>Afmeld dig nyhedsbreve, du ikke læser eller ønsker
+            <span class="checkmark"></span>Afmeld dig nyhedsbreve, du ikke læser
+            eller ønsker
           </label>
           <label class="container"
-            ><input type="checkbox" class="task-checkbox" data-progress="8.33" />
+            ><input
+              type="checkbox"
+              class="task-checkbox"
+              data-progress="8.33"
+            />
             <span class="checkmark"></span>Rapporter uønskede e-mails som SPAM
           </label>
           <p>
-            Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+            Antal data du slettet: <input
+              type="text"
+              value="0"
+              class="border-0 border-b-2 w-20 text-center bg-transparent p-0"
+            /> GB
           </p>
           <div class="py-4">
-            <a href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+            <a
+              href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
+              class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
               ><p class="flex gap-2 align-middle">
-                Sådan rydder du op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                Sådan rydder du op <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                    clip-rule="evenodd"></path>
                 </svg>
               </p>
             </a>
@@ -94,9 +167,17 @@ import Link from "../components/Link.astro";
       </div>
 
       <!-- den third section -->
-      <div class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10 mobilclean">
-        <div class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto">
-          <Image src={tablet} alt="img" class="w-40 object-cover rounded-lg flip-x3" />
+      <div
+        class="flex flex-col items-center justify-center w-full md:grid grid-cols-2 bg-[#060d26] rounded-2xl md:px-6 py-6 md:w-[700px] gap-10 mobilclean"
+      >
+        <div
+          class="border-solid border-2 border-[#1DBF62] p-4 rounded-md mx-auto"
+        >
+          <Image
+            src={tablet}
+            alt="img"
+            class="w-40 object-cover rounded-lg flip-x3"
+          />
         </div>
         <div class="flex flex-col px-4 gap-2 pt-4">
           <label class="container">
@@ -112,17 +193,35 @@ import Link from "../components/Link.astro";
             <span class="checkmark"></span>Slet filer, du ikke har brug for
           </label>
           <label class="container"
-            ><input type="checkbox" class="task-checkbox" data-progress="8.33" />
+            ><input
+              type="checkbox"
+              class="task-checkbox"
+              data-progress="8.33"
+            />
             <span class="checkmark"></span>Slet samtalehistorik
           </label>
           <p>
-            Antal data du slettet: <input type="text" value="0" class="border-0 border-b-2 w-20 text-center bg-transparent p-0" /> GB
+            Antal data du slettet: <input
+              type="text"
+              value="0"
+              class="border-0 border-b-2 w-20 text-center bg-transparent p-0"
+            /> GB
           </p>
           <div class="py-4">
-            <a href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view" class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
+            <a
+              href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+              class="text-[#1DBF62] hover:text-[#87C8F8] gap-2 font-bold py-2"
               ><p class="flex gap-2 align-middle">
-                Sådan rydder du op <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd"></path>
+                Sådan rydder du op <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z"
+                    clip-rule="evenodd"></path>
                 </svg>
               </p>
             </a>
@@ -131,9 +230,19 @@ import Link from "../components/Link.astro";
       </div>
       <div class="pt-4 pb-10">
         <Link variant="primary" size="medium" href="/registrer"
-          >Registrer dit bidrag <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-[#182D40] hover:text-[#072592] active:bg-[#87C8F8]">
-            <path fill-rule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" clip-rule="evenodd"></path>
-            <path d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z"></path>
+          >Registrer dit bidrag <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-6 text-[#182D40] hover:text-[#072592] active:bg-[#87C8F8]"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
+              clip-rule="evenodd"></path>
+            <path
+              d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z"
+            ></path>
           </svg>
         </Link>
       </div>
@@ -146,35 +255,59 @@ import Link from "../components/Link.astro";
 
   const computerclean = document.querySelector(".computerclean") as HTMLElement;
   inView(computerclean, ({ target }) => {
-    target.classList.add("animate__animated", "animate__slideInRight", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__slideInRight",
+      "fadeInOpacity"
+    );
   });
 
   const emailclean = document.querySelector(".emailclean") as HTMLElement;
   inView(emailclean, ({ target }) => {
-    target.classList.add("animate__animated", "animate__slideInLeft", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__slideInLeft",
+      "fadeInOpacity"
+    );
   });
 
   const mobilclean = document.querySelector(".mobilclean") as HTMLElement;
   inView(mobilclean, ({ target }) => {
-    target.classList.add("animate__animated", "animate__slideInRight", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__slideInRight",
+      "fadeInOpacity"
+    );
   });
 
   // Cast to HTMLElement to access the style property
   const ikonflip = document.querySelector(".flip-x") as HTMLElement;
   inView(ikonflip, ({ target }) => {
-    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__flipInX",
+      "fadeInOpacity"
+    );
     (target as HTMLElement).style.setProperty("animation-delay", "0.1s"); // Delay for first element
   });
 
   const ikonflip2 = document.querySelector(".flip-x2") as HTMLElement;
   inView(ikonflip2, ({ target }) => {
-    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__flipInX",
+      "fadeInOpacity"
+    );
     (target as HTMLElement).style.setProperty("animation-delay", "0.2s"); // Delay for second element
   });
 
   const ikonflip3 = document.querySelector(".flip-x3") as HTMLElement;
   inView(ikonflip3, ({ target }) => {
-    target.classList.add("animate__animated", "animate__flipInX", "fadeInOpacity");
+    target.classList.add(
+      "animate__animated",
+      "animate__flipInX",
+      "fadeInOpacity"
+    );
     (target as HTMLElement).style.setProperty("animation-delay", "0.3s"); // Delay for third element
   });
 
@@ -183,7 +316,9 @@ import Link from "../components/Link.astro";
 
   function updateProgressBar() {
     const totalTasks = checkboxes.length;
-    const checkedTasks = document.querySelectorAll(".task-checkbox:checked").length;
+    const checkedTasks = document.querySelectorAll(
+      ".task-checkbox:checked"
+    ).length;
     const percentage = (checkedTasks / totalTasks) * 100;
 
     // Update the progress bar width and text
