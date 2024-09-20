@@ -42,15 +42,15 @@ import registerimg from "../assets/images/registerpage.svg";
       <form class="flex flex-col w-full px-10 max-w-5xl mx-auto text-[#F2F4FF] animate__animated animate__slideInRight">
         <h1 class="flex justify-center mx-auto w-full jersey font-bold text-4xl px-10 pt-32 pb-6 md:px-0">Registrer din digitale oprydning</h1>
         <div class="flex flex-col pt-10 py-2">
-          <label for="navn" class="pr-1 pb-1">Fornavn</label>
+          <label for="fornavn" class="pr-1 pb-1">Fornavn</label>
           <input type="text" id="fornavn" name="navn" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col py-2">
-          <label for="navn" class="pr-1 pb-1">Efternavn</label>
+          <label for="efternavn" class="pr-1 pb-1">Efternavn</label>
           <input type="text" id="efternavn" name="navn" value="" class="w-auto bg-white/90 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col py-2">
-          <label for="adresse" class="pb-1">Email-adresse</label>
+          <label for="Email-adresse" class="pb-1">Email-adresse</label>
           <input type="text" id="Email-adresse" name="Email-adresse" value="" class="w-auto bg-white/80 text-slate-600 rounded-md border-none" />
         </div>
         <div class="flex flex-col md:flex-row py-2 gap-2">
@@ -81,15 +81,15 @@ import registerimg from "../assets/images/registerpage.svg";
         </div>
 
         <div class="flex flex-col w-full pt-4 pb-2">
-          <label for="beløbGB" class="pb-1">Beløb slettet (i GB)</label>
+          <label for="amountGB" class="pb-1">Beløb slettet (i GB)</label>
           <div class="relative w-full">
-            <input type="text" id="beløbGB" name="beløbGB" value="" class="w-full bg-white/90 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
-            <span class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-600"> GB </span>
+            <input type="text" id="amountGB" name="beløbGB" value="" class="w-full bg-white/90 text-slate-600 rounded-md border border-slate-300 px-3 py-2 pr-16" />
+            <span class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-900 font-bold"> GB </span>
           </div>
         </div>
         <div class="py-4">
-          <input type="checkbox" class="accent-blue-500" />
-          <label for="betalning">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day</label>
+          <input type="checkbox" id="checkbox" class="accent-blue-500" />
+          <label for="checkbox">Jeg vil gerne tilmelde mig nyheder fra World Cleanup Day</label>
         </div>
         <div class="py-4"><Button variant="primary" size="medium" id="myBtn">Registrer</Button></div>
       </form>
